@@ -10,7 +10,7 @@
   <script type="text/javascript" src= "js/cvss.js"></script>
 
   <script>
-    var simsubscreennum=0;
+    var simsubscreennum=5;
     var temp=0;
   </script>
 
@@ -152,7 +152,7 @@ Volume of Cylinder =&pi;/4*(d<sup>2</sup>h)
   <div class="simsubscreen" id="canvas3" style="visibility:hidden">
     <strong class="incanvas">STEP </strong>
     <span class="circlebg">&nbsp;3&nbsp;</span>
-    <p class="steptext" style="font-family:verdana; font-size:14px;">Place the SPC on a glass plate, open the slit above the cone by operating the valve and allow the sand torun down. The sand will freely run down till it fills the conical portion. When there is no further downward movement of sand in the SPC, close the slit. Measure the weight of the sand required to fill the cone. Let it be W2..</p>
+    <p class="steptext" style="font-family:verdana; font-size:14px;">Place the SPC on a glass plate, open the slit above the cone by operating the valve and allow the sand torun down. The sand will freely run down till it fills the conical portion.</p>
 
     <img id="1" style="position: absolute; left: 430px; top: 250px;" src="Images/wm1.png"/>
     <img id="ca" style="position: absolute; left: 491px; top: 370px;" src="Images/on.png"/>
@@ -249,21 +249,12 @@ Volume of Cylinder =&pi;/4*(d<sup>2</sup>h)
     <img id="e8" style="position: absolute;left: 1px; top: 230px;width:400px; height:150px;visibility:hidden; " src="Images/2.png"/>
 
       <img id="e10" style="position: absolute; left: 50px; top: 310px;width:150px; height:90px;visibility:hidden;  " src="Images/v1.svg"/>
-    <div class="door" id="incDoor13" style="position:absolute; width:100px; height:100px; visibility:hidden;fill:white;"></div>
-    <img id="e11" style="position:absolute; left:320px; top:100px; width:210px;visibility: hidden;" src="Images/oven.png" />
+<!--    <div class="door" id="incDoor13" style="position:absolute; width:100px; height:100px; visibility:hidden;fill:white;"></div>-->
+<!--    <img id="e11" style="position:absolute; left:320px; top:100px; width:210px;visibility: hidden;" src="Images/oven.png" />-->
     <img id="e20" style="position: absolute; left: 50px; top: 310px;width:150px; height:90px;visibility:hidden; " src="Images/v2.svg"/>
-    <img id="e12" style="position: absolute; left: 325px; top: 155px;width:190px;visibility:hidden;" title="door" src="Images/door.png"/>
-    <img id="e14" style="position:absolute; left:350px; top:215px; cursor:pointer;visibility: hidden;" src="Images/ovenknob.png" />
+<!--    <img id="e12" style="position: absolute; left: 325px; top: 155px;width:190px;visibility:hidden;" title="door" src="Images/door.png"/>-->
+<!--    <img id="e14" style="position:absolute; left:350px; top:215px; cursor:pointer;visibility: hidden;" src="Images/ovenknob.png" />-->
     <img id="e9" style="position: absolute; left: 50px; top: 310px;width:150px; height:90px;visibility:hidden; " src="Images/v2.svg"/>
-
-<!--    <div id="13-12" style="position:absolute; left:116px; top:126px; width:40px; height:17.5px; background-color:#D3D3D3; font-weight:bold; font-size:14px; visibility: hidden;" >&nbsp;105</div>-->
-<!---->
-<!--    <div class="door" id="incDoor13-1" ></div>-->
-<!--    <div class="door" id="incDoor13-2" style="visibility:hidden;"></div>-->
-<!--    <div class="door" id="incDoor13-3" style="visibility:hidden;"></div>-->
-<!--    <img id="13-11" style="position:absolute; left:35px; top:225px; visibility: hidden;" src="Images/ovenknob.png" />-->
-<!--    <div id="13-2" style="position:absolute; left:0px; top:0px; width:750px; height:550px; background-color:white; visibility:hidden;"></div>-->
-<!--    <h1 id="13-3" style="position:absolute;  left:225px; top:225px; color:grey; text-align:center; display:none;">After 24 hours</h1>-->
 
     <p id="can6" style="position:absolute;left: 410px; top:430px;font-family:verdana; font-size:14px;"></p>
     <p id="v6" style="position:absolute;left: 620.5px; top:160px;font-family:verdana; font-size:14px;"></p>
@@ -277,11 +268,12 @@ Volume of Cylinder =&pi;/4*(d<sup>2</sup>h)
     <p id="v10" style="position:absolute;left: 520.5px; top:380px;font-family:verdana; font-size:14px;"></p>
   </div>
 
+<!--step 6-->
     <div id="canvas6" class="simsubscreen" style="visibility:hidden;">
 <strong class="incanvas">STEP</strong>
 <span class="circlebg">&nbsp;6&nbsp;</span>
 <p class="steptext">&nbsp;Place the container with wet soil in the oven for 24 hours at 110&deg;C temperature.</p>
-<div id="13-12" style="position:absolute; left:116px; top:126px; width:40px; height:17.5px; background-color:#D3D3D3; font-weight:bold; font-size:14px;" >&nbsp;105</div>
+<div id="13-12" style="position:absolute; left:116px; top:126px; width:40px; height:17.5px; background-color:#D3D3D3; font-weight:bold; font-size:14px;" >&nbsp;31</div>
 <img id="13-1" style="position:absolute; left:20px; top:100px; width:210px;" src="Images/oven.png" />
 <div id="13-13" style="position:absolute; left:168px; top:124px; width:20.25px; height:18.5px; background-color:transparent; font-weight:bold; font-size:14px; cursor:pointer;" title="Increase Temperature"></div>
 <div id="13-14" style="position:absolute; left:192.5px; top:124px; width:20.25px; height:18.5px; background-color:transparent; font-weight:bold; font-size:14px; cursor:pointer;" title="Decrease Temperature"></div>
@@ -300,33 +292,35 @@ Volume of Cylinder =&pi;/4*(d<sup>2</sup>h)
 
   <!-- // Obsevations -->
   <div class="simsubscreen" id="canvas7" style="visibility: hidden">
-    <h1>Obsevations</h1>
+    <h2>Observations</h2>
 
     <div>
-      <p id="can06" style="position:absolute;top: 330px; font-family:verdana; font-size:14px;">Weight of sand in Calibrating Cylinder=(w1-w2-w3)= </p>
+      <p id="can06" style="position:absolute;top: 330px; font-family:verdana; font-size:14px;">Weight of sand in Calibrating Cylinder=<br>(w1-w2-w3) </p>
       <input id="t1" type="text" onfocus="this.value=''" style="border-bottom:1px solid black;position:absolute;left:310px;top:340px;width:90px;"></p>
-      <input id="check1" type="button" style="border-bottom: 1px solid black; position: absolute; left:430px;top:340px;" value="check">
+      <input id="check1" type="button" style="border-bottom: 1px solid black; position: absolute; left:470px;top:340px;" value="check">
       <span id="abc" style="position:absolute;left: 400px; top:330px;font-family:verdana; font-size:20px;color:blue;visibility:hidden;">&#10004;</span>
       <span id="bca" style="position:absolute;left: 400px; top:330px;font-family:verdana;font-size:20px;color:red;visibility:hidden;">&#10007;</span>
-      <input id="r1" type="button" style="border-bottom: 1px solid black; position: absolute;left:490px;top:340px;" value="Result">
-      <span id="f1" class="tooltip" style="border-bottom:1px dotted ; color:red;text-align:justify;position:absolute;left:550px;top:340px;">Formula
+      <input id="r1" type="button" style="border-bottom: 1px solid black; position: absolute;left:540px;top:340px;" value="Result">
+      <span id="f1" class="tooltip" style="border-bottom:1px dotted ; color:red;text-align:justify;position:absolute;left:620px;top:340px;">Formula
 
         <span style="width:100px" class="tooltiptext">
 (W<sub>1</sub>-W<sub>2</sub>-W<sub>3</sub>)
 </span>
 </span>
-
       <p id="value1" style="position:absolute;left: 330px; top:330px;font-family:verdana; font-size:14px;visibility:hidden;"><u>1444 gm</u></p>
+
+
+              <div id="div1"  style="visibility: hidden;">
 
                 <div class="input">
       <p id="can07" style="position:absolute;top: 390px; font-family:verdana; font-size:14px;">Weight of sand in Calibrating Cylinder=<br>(w1-w2-w3)/PI/4*(d<sub>2</sub>h)</p>
       <input id="t2" type="text" onfocus="this.value=''" style="border-bottom:1px solid black;position:absolute;left:310px;top:405px;width:90px;">
-      <input id="check2" type="button" style="border-bottom: 1px solid black; position: absolute; left:430px;top:400px; " value="check">
+      <input id="check2" type="button" style="border-bottom: 1px solid black; position: absolute; left:470px;top:400px; " value="check">
       <span id="abc11" style="position:absolute;left: 400px; top:390px;font-family:verdana; font-size:20px;color:blue;visibility:hidden;">&#10004;</span>
       <span id="bca11" style="position:absolute;left: 400px; top:390px;font-family:verdana;font-size:20px;color:red;visibility:hidden;">&#10007;</span>
-      <input id="r2" type="button" style="border-bottom: 1px solid black; position: absolute;left:490px;top:400px; " value="Result">
+      <input id="r2" type="button" style="border-bottom: 1px solid black; position: absolute;left:540px;top:400px; " value="Result">
 
-      <span id="f2" class="tooltip"  style="border-bottom:1px dotted ; color:red;text-align:justify;position:absolute;left:550px;top:400px;">Formula
+      <span id="f2" class="tooltip"  style="border-bottom:1px dotted ; color:red;text-align:justify;position:absolute;left:620px;top:400px;">Formula
 <span style="width:200px" class="tooltiptext">
 (W<sub>1</sub>-W<sub>2</sub>-W<sub>3</sub>)/&pi;/4 * (d<sup>2</sup>h)
 </span>
@@ -334,16 +328,19 @@ Volume of Cylinder =&pi;/4*(d<sup>2</sup>h)
 
       <p id="value2" style="position:absolute;left:330px;top:390px;font-family:verdana; font-size:14px;visibility:hidden;"><u>1.4708 gm</u></p>
                 </div>
+              </div>
+                    <div id="div2"  style="visibility: hidden;">
+
                 <div class="input">
 
       <p id="can08" style="position:absolute;top: 450px;  font-family:verdana; font-size:14px;">Weight of sand in Calibrating Cylinder=<br>w1=((b-c)/(c-a)*100)</p>
       <input id="t3" type="text" onfocus="this.value=''" style="border-bottom:1px solid black;position:absolute;left:310px;top:465px;width:90px;">
-      <input id="check3" type="button" style="border-bottom: 1px solid black; position: absolute; left:430px;top:465px;" value="check">
+      <input id="check3" type="button" style="border-bottom: 1px solid black; position: absolute; left:470px;top:465px;" value="check">
       <span id="abc22" style="position:absolute;left: 400px; top:460px;font-family:verdana; font-size:20px;color:blue;visibility:hidden;">&#10004;</span>
       <span id="bca22" style="position:absolute;left: 400px; top:460px;font-family:verdana;font-size:20px;color:red;visibility:hidden;">&#10007;</span>
-      <input id="r3" type="button" style="border-bottom: 1px solid black; position: absolute;  left:490px;top:465px;  " value="Result">
+      <input id="r3" type="button" style="border-bottom: 1px solid black; position: absolute;  left:540px;top:465px;  " value="Result">
 
-      <span id="f3" class="tooltip" style="border-bottom:1px dotted ; color:red;text-align:justify;position:absolute;left:550px;top:465px;">Formula
+      <span id="f3" class="tooltip" style="border-bottom:1px dotted ; color:red;text-align:justify;position:absolute;left:620px;top:465px;">Formula
 <span style="width:180px" class="tooltiptext">
 W<sub>1</sub>=((b-c)/(c-a)*100)
 </span>
