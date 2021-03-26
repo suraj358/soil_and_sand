@@ -4,49 +4,49 @@
   <meta charset="UTF-8">
 
   <title>SOLVE</title>
-  <link rel="stylesheet" href="css/cvss.css" />
-   <link rel="stylesheet" href="css/mathstyle.css" />
-   <script type="text/javascript" src= "js/jquerymin.js"></script>
-  <script type="text/javascript" src= "js/cvss.js"></script>
+  <link rel="stylesheet" href="css/soft.css" />
+  <link rel="stylesheet" href="css/mathstyle.css" />
+  <script type="text/javascript" src= "js/jquerymin.js"></script>
+  <script type="text/javascript" src= "js/soft.js"></script>
 
   <script>
-    var simsubscreennum=5;
+    var simsubscreennum=9;
     var temp=0;
   </script>
 
   <style>
-.popup
-{
-	border-radius:5px;
-	background-color:black;
-	color:white;
-	padding:5px;
-}
+    .popup
+    {
+      border-radius:5px;
+      background-color:black;
+      color:white;
+      padding:5px;
+    }
 
-.tooltip {
-  position: relative;
-  display: inline-block;
-  border-bottom: 1px dotted black;
-}
+    .tooltip {
+      position: relative;
+      display: inline-block;
+      border-bottom: 1px dotted black;
+    }
 
-.tooltip .tooltiptext {
-  left:50px;
-  visibility: hidden;
-  width: 500px;
-  background-color: black;
-  color: #fff;
-  border-radius: 6px;
-  padding: 10px 10px 10px 10px;
+    .tooltip .tooltiptext {
+      left:50px;
+      visibility: hidden;
+      width: 500px;
+      background-color: black;
+      color: #fff;
+      border-radius: 6px;
+      padding: 10px 10px 10px 10px;
 
-  /* Position the tooltip */
-  position: absolute;
-  z-index: 100;
-  <!-- text-align:center; -->
-}
+      /* Position the tooltip */
+      position: absolute;
+      z-index: 100;
+    <!-- text-align:center; -->
+    }
 
-.tooltip:hover .tooltiptext {
-  visibility: visible;
-}
+    .tooltip:hover .tooltiptext {
+      visibility: visible;
+    }
 
   </style>
 
@@ -61,71 +61,57 @@
 
   <!--SubScreen Home-->
   <div class="simsubscreen" id="canvas0">
-
     <h4 class="incanvas" style="font-family:verdana; ">Objective</h4>
     <p class="incanvas" style="font-family:verdana; font-size:14px;">Dry Density of Soil by Sand Replacement Method.</p></br>
     <h4 class="incanvas" style="font-family:verdana; ">Apparatus used:</h4>
-    <p class="incanvas" style="font-family:verdana; font-size:14px;">Sand Pouring Cylinder, Weighing Scale, Cylindrical Calibrating Container, Vernier Caliper, Weighing Scale.</p><img style="position:absolute; left:10px; top:160px;" title="" src="Images/human.png" />
+    <p class="incanvas" style="font-family:verdana; font-size:14px;">Sand Pouring Cylinder, Weighing Scale, Cylindrical Calibrating Container, Vernier Caliper, Weighing Scale.</p>
+    <img style="position:absolute; left:10px; top:160px;" title="" src="images/human.png" />
 
-    <img style="position:absolute; left:150px; top:340px;width:550px; height:180px;" title="Table" src="Images/table.png" />
-    <img id="a" style="position: absolute; left: 520px; top: 325px; width:280px;" title="Weighing scale" src="Images/ewm.png"/>
-    <img id="c" style="position: absolute; left: 250px; top: 250px; width:90px; height:150px;" title="sand pouring cylinder" src="Images/emptyMould.png"/>
-    <img id="b" style="position: absolute; left: 380px; top: 340px; width:95px; height:75px;" title="cylindrical calibrating container" src="Images/121.png"/>
-
+    <img style="position:absolute; left:150px; top:340px;width:550px; height:180px;" title="Table" src="images/table.png" />
+    <img id="a" style="position: absolute; left: 520px; top: 325px; width:280px;" title="Weighing scale" src="images/ewm.png"/>
+    <img id="c" style="position: absolute; left: 250px; top: 250px; width:90px; height:150px;" title="Sand pouring cylinder" src="images/emptyMould.png"/>
+    <img id="b" style="position: absolute; left: 380px; top: 340px; width:95px; height:75px;" title="Cylindrical calibrating container" src="images/121.png"/>
   </div>
 
+
+  
   <!--Step1	-->
   <div class="simsubscreen" id="canvas1" style="visibility:hidden">
     <strong  class="incanvas">STEP </strong>
     <span class="circlebg">&nbsp;1&nbsp;</span>
-    <p class="steptext" style="font-family:verdana; font-size:14px;">Height and Diameter of the Sand Pouring Cylinder.</p>
+    <p class="steptext" style="font-family:verdana; font-size:14px;"> Calibration of the cylinder: Measure the Height and Diameter of the calibrating container.</p>
 
-    <img id="a1" style="position: absolute; left: 47px; top: 180px; width:100px; height:200px;"title="sand pouring cylinder"src="Images/emptyMould.png"/>
-    <img id="a2" style="position: absolute; left: 500px; top: 50px;cursor:move; "title="Weighing scale" src="Images/scale1.png"/>
-
-    <p id="can1" style="position:absolute;left: 290px; top:390px; font-family:verdana; font-size:14px;">Height  of Cylinder (h)  =_____ </p>
+    <img id="a1" style="position: absolute; left: 47px; top: 150px; width:100px; height:200px;"title="Cylindrical calibrating container"src="images/121.svg"/>
+    <img id="a2" style="position: absolute; left: 500px; top: 50px;cursor:move; "title="Weighing scale" src="images/scale1.png"/>
+    <p id="can1" style="position:absolute;left: 290px; top:390px; font-family:verdana; font-size:14px;">Height  of  calibrating container, (h)  =_____ </p>
     <p id="v1" style="position:absolute;left: 530.5px; top:342px;font-family:verdana; font-size:14px;"></p>
-
-
-    <img id="a8" style="position: absolute; left: 230px; top: 100px;max-width:411px; max-height:125px;width:100%;height:100%;visibility:hidden;"title="verniers calipers" src="Images/vc1.png"/>
-    <img id="a9" style="position: absolute; left: 300px; top: 100px;max-width:70px; max-height:124px;width:100%;height:100%;visibility:hidden;"title="verniers calipers" src="Images/vc2.png"/>
-
-    <p id="can2" style="position:absolute;left: 290px; top:420px;font-family:verdana; font-size:14px;">Diameter of Cylinder (d)  =   _____ </p>
+    <img id="a8" style="position: absolute; left: 230px; top: 100px;max-width:411px; max-height:125px;width:100%;height:100%;visibility:hidden;cursor: move;"title="Verniers calipers" src="images/vc1.png"/>
+    <img id="a9" style="position: absolute; left: 300px; top: 100px;max-width:70px; max-height:124px;width:100%;height:100%;visibility:hidden;"title="Verniers calipers" src="images/vc2.png"/>
+    <p id="can2" style="position:absolute;left: 290px; top:420px;font-family:verdana; font-size:14px;">Internal Diameter of calibrating container, (d)  =   _____ </p>
     <p id="v2" style="position:absolute;left: 533.5px; top:342px;font-family:verdana; font-size:14px;"></p>
+    <p id="canV" style="position:absolute;left: 50px; top:180px;font-family:verdana; font-size:14px;">Volume of calibrating container, V<sub>c</sub>  = &pi;*d<sup>2</sup><span>/</span>4<span>h</span> _____ </p>
 
-    <p id="canV" style="position:absolute;left: 50px; top:180px;font-family:verdana; font-size:14px;">Volume of Cylinder  =  _____ </p>
-    <span id="formulaVolume" onclick="check()">Volume of Cylinder = &pi;/4 * (d<sup>2</sup>h)</span>
-
-    <p id="canh" style="position:absolute;left: 50px; top:100px;font-family:verdana; font-size:14px;">Internal Height of the Cylinder   =  12.5cm</p></br></br>
-    <p id="cand" style="position:absolute;left: 50px; top:150px;font-family:verdana; font-size:14px;">Internal Diameter of the Cylinder   =  10cm</p>
-
-    <p id="cal" style="position:absolute;top: 300px; left:50px;font-family:verdana; font-size:14px;visibility:hidden;">Volume of Cylinder   =  </p>
- <p id="cal1"
-        style="position:absolute;top: 300px; left:28px; font-family:verdana; font-size:14px;visibility:hidden;">Volume
-        of the core cutter =</p>
-      <input id="tx" type="text" onfocus="this.value=''"
-        style="border-bottom:1px solid black;position:absolute;left:235px;top:315px;visibility:hidden;width:90px;"
-        autocomplete="off" required>
-      <p id="q" style="position:absolute;left:335px;top:305px;visibility:hidden;">cc</p>
-      <input id="ch" type="button"
-        style="border-bottom:1px solid black;position:absolute;left:235px;top:380px;visibility:hidden;" value="check">
-      <input id="re" type="button"
-        style="border-bottom: 1px solid black; position: absolute; left: 290px; top: 380px; visibility: hidden;"
-        value="Result">
-      <p id="result" style="position:absolute; left:365px; top:290px; color:#32CD32; visibility:hidden;  font-size:22px;">✔
-      </p>
-      <p id="w1" style="position:absolute; left: 365px; top: 290px; color: red; visibility: hidden; font-size: 22px;">✘
-      </p>
-      <p id="can33"
-        style="position:absolute;top: 380px; left:50px; font-family:verdana; font-size:14px;visibility:hidden;color:red;">
-        Volume of Cylinder = 981</p>
-    <span id="formula" class="tooltip" style="border-bottom:1px dotted ; color:red;text-align:justify;position:absolute;left:460px;top:310px;visibility:hidden;">Formula
-<span class="tooltiptext">
-Volume of Cylinder =&pi;/4*(d<sup>2</sup>h)
-</span>
-</span>
-    <p id="value" style="position:absolute;top: 300px; left:200px;font-family:verdana; font-size:14px;visibility:hidden;"><U>981</U></p>
+    <span id="formulaVolume" onclick="ch()">Volume of Cylinder = &pi;/4 * (d<sup>2</sup>h)</span>
+    <p id="canh" style="position:absolute;left: 50px; top:100px;font-family:verdana; font-size:14px;">Height  of  calibrating container, (h)   =  14.5cm</p></br></br>
+    <p id="cand" style="position:absolute;left: 50px; top:150px;font-family:verdana; font-size:14px;">Internal Diameter of calibrating container, (d)   =  10cm</p>
+    <p id="cal" style="position:absolute;top: 200px; left:50px;font-family:verdana; font-size:14px;visibility:hidden;">Volume of Calibrating container, V<sub>c</sub>= &pi;*d<sup>2</sup><span>/</span>4<span>h</span> =  </p>
+    <input id="tx" type="text" onfocus="this.value=''" style="border-bottom:1px solid black;position:absolute;left:350px;top:210px;visibility:hidden;width:90px;" autocomplete="off" required>
+    <p id="q" style="position:absolute;left:450px;top:200px;visibility:hidden;">cm<sup>3</sup></p>
+    <input id="ch" type="button" style="border-bottom:1px solid black;position:absolute;left:250px;top:280px;visibility:hidden;" value="check">
+    <input id="re" type="button" style="border-bottom: 1px solid black; position: absolute; left: 350px; top: 280px; visibility: hidden;" value="Result">
+    <p id="result" style="position:absolute; left:490px; top:180px; color:#32CD32; visibility:hidden;  font-size:22px;">✔</p>
+    <p id="w1" style="position:absolute; left: 490px; top: 180px; color: red; visibility: hidden; font-size: 22px;">✘</p>
+    <span id="formula" class="tooltip" style="border-bottom:1px dotted ; color:red;text-align:justify;position:absolute;left:180px;top:400px;visibility:hidden;">Formula
+    <span class="tooltiptext">Volume of Cylinder =&pi;/4*(d<sup>2</sup>h)
+    </span>
+    </span>
+    <p id="value" style="position:absolute;top: 200px; left:330px;font-family:verdana; font-size:14px;visibility:hidden;"><U>1138.685 cm<sup>3</sup></U></p>
   </div>
+
+
+
+
+
 
   <!-- step2 -->
   <div class="simsubscreen" id="canvas2" style="visibility:hidden">
@@ -133,17 +119,17 @@ Volume of Cylinder =&pi;/4*(d<sup>2</sup>h)
     <span class="circlebg" >&nbsp;2&nbsp;</span>
     <p  class="steptext" style="font-family:verdana; font-size:14px;">Fill the Sand Pouring Cylinder (SPC) with sand and find its weight (W<sub>1</sub>).</p>
 
-    <img id="123"style="position: absolute; left: 430px; top: 250px;width:250px; height:150px; visibility: hidden;" src="Images/wm1.png"/>
-    <img id="ba" style="position: absolute; left: 488px; top: 348px;visibility:hidden;" src="Images/on.png"/>
-    <img id="bb" style="position: absolute; left: 585px; top: 348px;visibility:hidden;" src="Images/tare.png"/>
-    <img id="b1" style="position: absolute; left: 50px; top: 175px; width:100px; height:200px;cursor:move;" src="Images/emptyMould.png"/>
-    <img id="b2" style="position: absolute; left: 400px; top: 200px;cursor:move;" src="Images/capan.svg"/>
-    <img id="b5" style="position: absolute; left: 100px; top: 50px;visibility:hidden;" src="Images/capan.svg"/>
-    <img id="b6" style="position: absolute; left: 100px; top: 140px; width:63px; height:38px;visibility:hidden;" src="Images/pc.png"/>
-    <img id="b7" style="position: absolute; left: 500px; top: 80px; width:100px; height:200px;visibility:hidden;" src="Images/emptyMould.png"/>
-    <img id="b8" style="position: absolute; left: 50px; top: 175px; width:100px; height:200px;visibility:hidden;" src="Images/setup.png"/>
+    <img id="123"style="position: absolute; left: 430px; top: 250px;width:250px; height:150px; visibility: hidden;" src="images/wm1.png"/>
+    <img id="ba1" style="position: absolute; left: 488px; top: 348px;visibility:hidden;" src="images/on.png"/>
+    <img id="bb1" style="position: absolute; left: 585px; top: 348px;visibility:hidden;" src="images/tare.png"/>
+    <img id="b1" style="position: absolute; left: 50px; top: 175px; width:100px; height:200px;cursor:move;" src="images/emptyMould.png"/>
+    <img id="b2" style="position: absolute; left: 400px; top: 200px;cursor:move;" src="images/capan.png"/>
+    <img id="b5" style="position: absolute; left: 100px; top: 50px;visibility:hidden;" src="images/capan.png"/>
+    <img id="b6" style="position: absolute; left: 100px; top: 140px; width:63px; height:38px;visibility:hidden;" src="images/pc.png"/>
+    <img id="b7" style="position: absolute; left: 500px; top: 80px; width:100px; height:200px;visibility:hidden;" src="images/emptyMould.png"/>
+    <img id="b8" style="position: absolute; left: 50px; top: 175px; width:100px; height:200px;visibility:hidden;" src="images/setup.png"/>
 
-    <p id="can3" style="position:absolute;top: 450px; font-family:verdana; font-size:14px;"></p>
+    <p id="can3" style="position:absolute;top: 430px; font-family:verdana; font-size:14px;"></p>
     <p id="v3" style="position:absolute;left: 538px; top:312px;font-family:verdana; font-size:14px;";></p>
   </div>
 
@@ -152,247 +138,352 @@ Volume of Cylinder =&pi;/4*(d<sup>2</sup>h)
   <div class="simsubscreen" id="canvas3" style="visibility:hidden">
     <strong class="incanvas">STEP </strong>
     <span class="circlebg">&nbsp;3&nbsp;</span>
-    <p class="steptext" style="font-family:verdana; font-size:14px;">Place the SPC on a glass plate, open the slit above the cone by operating the valve and allow the sand torun down. The sand will freely run down till it fills the conical portion.</p>
+<!--    <p class="steptext" style="font-family:verdana; font-size:14px;">Place the SPC on a glass plate, open the slit above the cone by operating the value and allow the sand torun down. The sand will freely run down till it fills the conical portion.</p>-->
+    <p class="steptext" style="font-family:verdana; font-size:14px;">Allow the sand of volume equal to that of the calibrating container to run out of cylinder by opening the shutter. Measure weight of calibrating cantainer with sand without sand.</p>
 
-    <img id="1" style="position: absolute; left: 430px; top: 250px;" src="Images/wm1.png"/>
-    <img id="ca" style="position: absolute; left: 491px; top: 370px;" src="Images/on.png"/>
-    <img id="cb" style="position: absolute; left: 595px; top: 370px;" src="Images/tare.png"/>
-    <img id="c1" style="position: absolute; left: 115px; top: 310px; width:120px; height:100px;"title="sand pouring cylinder" src="Images/121.svg"/>
-    <img id="c3" style="position: absolute; left: 110px; top: 167px;width:140px; height:210px;visibility:hidden;"title="sand pouring cylinder" src="Images/fullSetup.png"/>
-    <img id="c8" style="position: absolute; left: 30px; top: 280px; width:278px; height:149px;visibility:hidden;" src="Images/emptyGlass.png"/>
-    <img id="c14" style="position: absolute; left: 480px; top: 210px;visibility:hidden;" src="Images/plain.svg"/>
-    <img id="c9" style="position: absolute; left: 30px; top: 280px; width:278px; height:149px;visibility:hidden;" src="Images/glassSand.png"/>
-    <img id="c2" style="position: absolute; left: 10px; top: 100px; width:100px; height:200px;cursor:move;"title="sand pouring cylinder" src="Images/setup.png"/>
+    <img id="1" style="position: absolute; left: 430px; top: 250px;" src="images/wm1.png"/>
+    <img id="ca" style="position: absolute; left: 491px; top: 370px;" src="images/on.png"/>
+    <img id="cb" style="position: absolute; left: 595px; top: 370px;" src="images/tare.png"/>
+    <img id="c1" style="position: absolute; left: 115px; top: 310px; width:120px; height:100px;visibility: hidden;"title="sand pouring cylinder" src="images/121.png"/>
+    <img id="c3" style="position: absolute; left: 110px; top: 167px;width:140px; height:210px;visibility:hidden;"title="sand pouring cylinder" src="images/fullSetup.png"/>
 
-    <img id="c10" style="position: absolute;left: 500px; top: 100px; width:100px; height:200px;visibility:hidden;"title="sand pouring cylinder" src="Images/emptyMould.png"/>
-    <img id="c11" style="position: absolute; left: 118px; top: 155px;  width:100px; height:200px;visibility:hidden;"title="sand pouring cylinder" src="Images/emptyMould.png"/>
+    <img id="c2" style="position: absolute; left: 10px; top: 100px; width:100px; height:200px;cursor:move;"title="sand pouring cylinder" src="images/setup.png"/>
 
-    <img id="c5" style="position: absolute; left: 38px; top: 290px;width:100px; height:53px;visibility:hidden;" src="Images/key.png"/>
-    <img id="c7" style="position: absolute; left: 115px; top: 340px; width:120px; height:100px;visibility:hidden;" src="Images/1211.svg"/>
-    <img id="c15" style="position: absolute; left: 480px; top: 210px;visibility:hidden;" src="Images/sandPlate.png"/>
-    <img id="c13" style="position: absolute; left: 355px;top: 150px;visibility:hidden;" src="Images/pourGlassSand.png"/>
+    <img id="c10" style="position: absolute;left: 500px; top: 100px; width:100px; height:200px;visibility:hidden;"title="sand pouring cylinder" src="images/emptyMould.png"/>
+    <img id="c11" style="position: absolute; left: 118px; top: 155px;  width:100px; height:200px;visibility:hidden;"title="sand pouring cylinder" src="images/emptyMould.png"/>
 
-    <p id="can4" style="position:absolute;top: 150px;  font-family:verdana; font-size:14px;">
-    <p id="can41" style="position:absolute;top: 100px;  font-family:verdana; font-size:14px;">
-    <p id="v4" style="position:absolute;left: 540.5px; top:330px;font-family:verdana; font-size:14px;"></p>
-    <p id="v41" style="position:absolute;left: 540.5px; top:330px;font-family:verdana; font-size:14px;"></p>
+    <img id="c7" style="position: absolute; left: 115px; top: 340px; width:120px; height:100px;visibility:hidden;" src="images/1211.png"/>
 
+    <p id="can4" style="position:absolute;top: 430px;  font-family:verdana; font-size:14px;">
+    <p id="can40" style="position:absolute;top: 460px;  font-family:verdana; font-size:14px;">
+    <p id="v4" style="position:absolute;left: 545.5px; top:330px;font-family:verdana; font-size:14px;"></p>
+    <p id="v40" style="position:absolute;left: 545.5px; top:330px;font-family:verdana; font-size:14px;"></p>
   </div>
 
-
-  <!--Step4	-->
+  <!--  STEP 4-->
   <div class="simsubscreen" id="canvas4" style="visibility:hidden">
+    <strong class="incanvas">STEP </strong>
+    <span class="circlebg">&nbsp;4&nbsp;</span>
+    <p class="steptext" style="font-family:verdana; font-size:14px;">Place the SPC on a glass plate, open the slit above the cone by operating the valve and allow the sand to run down. The sand will freely run down till it fills the conical portion and note down the weight of sand in the conical portion </p>
+
+    <img id="c18" style="position: absolute; left: 430px; top: 250px;" src="images/wm1.png"/>
+    <img id="ca11" style="position: absolute; left: 491px; top: 370px;" src="images/on.png"/>
+    <img id="cb1" style="position: absolute; left: 595px; top: 370px;" src="images/tare.png"/>
+    <img id="c15" style="position: absolute; left: 480px; top: 210px;visibility:hidden;" src="images/sandPlate.png"/>
+    <img id="c8" style="position: absolute; left: 30px; top: 280px; width:278px; height:149px;visibility:hidden;" src="images/emptyGlass.png"/>
+    <img id="c111" style="position: absolute; left: 118px; top: 155px;  width:100px; height:200px;visibility:hidden;"title="sand pouring cylinder" src="images/emptyMould.png"/>
+    <img id="c5" style="position: absolute; left: 38px; top: 290px;width:100px; height:53px;visibility:hidden;" src="images/key.png"/>
+    <img id="c14" style="position: absolute; left: 480px; top: 210px;visibility:hidden;" src="images/plain.svg"/>
+    <img id="c13" style="position: absolute; left: 355px;top: 150px;visibility:hidden;" src="images/pourGlassSand.png"/>
+    <img id="c9" style="position: absolute; left: 30px; top: 280px; width:278px; height:149px;visibility:hidden;" src="images/glassSand.png"/>
+    <img id="c22" style="position: absolute; left: 500px; top: 100px; width:100px; height:200px;cursor:move;"title="Sand pouring cylinder" src="images/setup.png"/>
+
+    <p id="can4a" style="position:absolute;top: 430px;  font-family:verdana; font-size:14px;">
+    <p id="can41a" style="position:absolute;top: 430px;  font-family:verdana; font-size:14px;">
+        <p id="can41aa" style="position:absolute;top: 450px;  font-family:verdana; font-size:14px;">
+
+    <p id="v4a" style="position:absolute;left: 545.5px; top:330px;font-family:verdana; font-size:14px;"></p>
+    <p id="v41a" style="position:absolute;left: 545.5px; top:330px;font-family:verdana; font-size:14px;"></p>
+  </div>
+
+  <!--Step 5	-->
+  <div class="simsubscreen" id="canvas5" style="visibility:hidden">
     <strong  class="incanvas">STEP </strong>
-    <span class="circlebg" >&nbsp;4&nbsp;</span>
-    <p class="steptext" style="font-family:verdana; font-size:14px;">Clean and level the soil to be tested.</p>
+    <span class="circlebg" >&nbsp;5&nbsp;</span>
+    <p class="steptext" style="font-family:verdana; font-size:14px;">Clean and level the soil to be tested. Then Keep the metal tray on the level surface and excavate a circular hole of volume equal to that of calibrating container. Measure weight of excavated soil in the tray and weight of sand pouring cylinder with sand after pouring in to the hole. </p>
+
+    <img id="d1" style="position: absolute; left:5px; top: 200px;width:500px; height:300px; " src="images/e1.png"/>
+    <img id="d2" style="position: absolute; left: 300px; top: 200px;width:200px; height:150px;cursor:move; " src="images/trowel.svg"/>
+    <img id="d3" style="position: absolute; left:5px; top: 200px;width:500px; height:300px;visibility:hidden; " src="images/e2.png"/>
+    <img id="d4" style="position: absolute; left:5px; top: 200px;width:500px; height:300px;visibility:hidden; " src="images/e3.png"/>
+    <img id="d12" style="position: absolute; left: 280px; top:398px;visibility:hidden; " src="images/plain.svg"/>
+    <img id="d6" style="position: absolute; left: 180px; top: 270px;width:185px; height:100px;visibility:hidden; " src="images/hole.png"/>
+    <img id="d7" style="position: absolute; left: 13px; top: 190px;width:400px; height:150px;visibility:hidden; " src="images/trowel2.svg"/>
+    <img id="d5" style="position: absolute; left: 250px; top: 200px;width:200px; height:150px;visibility:hidden; " src="images/trowels.svg"/>
+    <img id="d13" style="position: absolute; left: 300px; top: 200px;width:200px; height:150px;visibility:hidden;" src="images/trowel.svg"/>
+    <img id="d8" style="position: absolute; left: 145px; top: 350px;width:50px; height:20px;visibility:hidden; " src="images/ws.png"/>
+    <img id="d9" style="position: absolute; left: 110px; top: 335px;width:50px; height:20px;visibility:hidden; " src="images/ws2.png"/>
+    <img id="d10" style="position: absolute; left: 170px; top: 320px;width:80px; height:20px;visibility:hidden; " src="images/ws3.png"/>
+<!--    <img id="d11" style="position: absolute; left: 50px; top: 270px;width:400px; height:100px;visibility:hidden; " src="Images/g1.png"/>-->
+    <img id="d14" style="position: absolute;left: 304px; top:438px;height:20px;width:130px; visibility:hidden; " src="images/ws3.png"/>
+    <img id="d15" style="position: absolute; left: 304px; top:438px;height:20px;width:130px; visibility:hidden; " src="images/ws.png"/>
+    <img id="d16" style="position: absolute; left: 304px; top:438px;height:20px;width:130px; visibility:hidden; " src="images/ws2.png"/>
+    <img id="d17" style="position: absolute; left: 410px; top:50px;width:400px; height:200px;visibility:hidden; " src="images/grap.png"/>
+
+    <img id="d18" style="position: absolute; left: 430px; top: 250px;visibility:hidden;" src="images/wm1.png"/>
+    <img id="da" style="position: absolute; left: 490px; top: 370px;visibility:hidden;" src="images/on.png"/>
+    <img id="db" style="position: absolute; left: 595px; top: 370px;visibility:hidden;" src="images/tare.png"/>
+
+    <img id="d19" style="position: absolute; left: 50px; top: 250px;width:277px; height:100px;visibility:hidden; " src="images/v1.svg"/>
+    <img id="d23" style="position: absolute; left: 50px; top: 350px;width:200px; height:100px;visibility:hidden; " src="images/v2.svg"/>
+<!--    <img id="d20" style="position: absolute; left: 100px; top: 200px;width:200px; height:150px;visibility:hidden; " src="Images/a1.png"/>-->
+<!--    <img id="d21" style="position: absolute; left: 10px; top: 200px;width:200px; height:150px;visibility:hidden; " src="Images/a2.png"/>-->
+<!--    <img id="d22" style="position: absolute; left: 10px; top: 200px;width:200px; height:150px;visibility:hidden; " src="Images/a3.png"/>-->
+    <img id="d27" style="position: absolute;left: 115px; top: 157px;width:100px; height:200px;visibility:hidden;" src="images/setup.png"/>
+    <img id="d24" style="position: absolute; left: 120px; top: 157px;width:100px; height:200px;visibility:hidden;" src="images/emptyMould.png"/>
+    <img id="d28" style="position: absolute;left: 500px; top: 90px; width:100px; height:200px;visibility:hidden;" src="images/emptyMould.png"/>
+    <img id="d25" style="position: absolute; left: 38px; top: 290px;width:100px; height:53px;visibility:hidden;" src="images/key.png"/>
+    <img id="d26" style="position: absolute; left: 45px; top: 290px;width:100px; height:53px;visibility:hidden;" src="images/key.png"/>
+    <img id="d29" style="position: absolute; left: 410px; top:50px;width:400px; height:200px;visibility:hidden; " src="images/graph.png"/>
+
+        <img id="pl" style="position: absolute; left: 150px; top:350px;visibility:hidden; " src="images/pl.png"/>
+
+    <p id="can5" style="position:absolute;top: 430px; left:5px; font-family:verdana; font-size:14px;">
+    <p id="v5" style="position:absolute;left: 545.5px; top:330px;font-family:verdana; font-size:14px;"></p>
+    <p id="v51" style="position:absolute;left: 545.5px; top:330px;font-family:verdana; font-size:14px;"></p>
 
 
-    <img id="d1" style="position: absolute; left:5px; top: 200px;width:500px; height:300px; " src="Images/e1.png"/>
-    <img id="d2" style="position: absolute; left: 300px; top: 200px;width:200px; height:150px;cursor:move; " src="Images/trowel.svg"/>
-    <img id="d3" style="position: absolute; left:5px; top: 200px;width:500px; height:300px;visibility:hidden; " src="Images/e2.png"/>
-    <img id="d4" style="position: absolute; left:5px; top: 200px;width:500px; height:300px;visibility:hidden; " src="Images/e3.png"/>
-    <img id="d12" style="position: absolute; left: 280px; top:398px;visibility:hidden; " src="Images/plain.svg"/>
-    <img id="d6" style="position: absolute; left: 180px; top: 270px;width:185px; height:100px;visibility:hidden; " src="Images/hole.png"/>
-    <img id="d7" style="position: absolute; left: 13px; top: 190px;width:400px; height:150px;visibility:hidden; " src="Images/trowel2.svg"/>
-    <img id="d5" style="position: absolute; left: 250px; top: 200px;width:200px; height:150px;visibility:hidden; " src="Images/trowels.svg"/>
-    <img id="d13" style="position: absolute; left: 300px; top: 200px;width:200px; height:150px;visibility:hidden;" src="Images/trowel.svg"/>
+    <p id="can50" style="position:absolute;top: 430px; left:5px; font-family:verdana; font-size:14px;">
+    <p id="can500" style="position:absolute;top: 450px; left:5px; font-family:verdana; font-size:14px;">
+    <p id="v50" style="position:absolute;left: 545.5px; top:330px;font-family:verdana; font-size:14px;"></p>
+    <p id="v510" style="position:absolute;left: 545.5px; top:330px;font-family:verdana; font-size:14px;"></p>
 
-    <img id="d8" style="position: absolute; left: 145px; top: 350px;width:50px; height:20px;visibility:hidden; " src="Images/ws.png"/>
-    <img id="d9" style="position: absolute; left: 110px; top: 335px;width:50px; height:20px;visibility:hidden; " src="Images/ws2.png"/>
-    <img id="d10" style="position: absolute; left: 170px; top: 320px;width:80px; height:20px;visibility:hidden; " src="Images/ws3.png"/>
+    <p id="ca1" style="position:absolute;top: 150px; left:5px; font-family:verdana; font-size:14px;">
 
-    <img id="d11" style="position: absolute; left: 50px; top: 270px;width:400px; height:100px;visibility:hidden; " src="Images/g1.png"/>
-    <img id="d14" style="position: absolute;left: 304px; top:438px;height:20px;width:130px; visibility:hidden; " src="Images/ws3.png"/>
-    <img id="d15" style="position: absolute; left: 304px; top:438px;height:20px;width:130px; visibility:hidden; " src="Images/ws.png"/>
-    <img id="d16" style="position: absolute; left: 304px; top:438px;height:20px;width:130px; visibility:hidden; " src="Images/ws2.png"/>
-    <img id="d17" style="position: absolute; left: 410px; top:50px;width:400px; height:200px;visibility:hidden; " src="Images/grap.png"/>
-    <img id="d18" style="position: absolute; left: 430px; top: 250px;visibility:hidden;" src="Images/wm1.png"/>
-    <img id="da" style="position: absolute; left: 490px; top: 370px;visibility:hidden;" src="Images/on.png"/>
-    <img id="db" style="position: absolute; left: 595px; top: 370px;visibility:hidden;" src="Images/tare.png"/>
-    <img id="d19" style="position: absolute; left: 50px; top: 250px;width:277px; height:100px;visibility:hidden; " src="Images/v1.svg"/>
-    <img id="d23" style="position: absolute; left: 50px; top: 350px;width:200px; height:100px;visibility:hidden; " src="Images/v2.svg"/>
-    <img id="d20" style="position: absolute; left: 100px; top: 200px;width:200px; height:150px;visibility:hidden; " src="Images/a1.png"/>
-    <img id="d21" style="position: absolute; left: 10px; top: 200px;width:200px; height:150px;visibility:hidden; " src="Images/a2.png"/>
-    <img id="d22" style="position: absolute; left: 10px; top: 200px;width:200px; height:150px;visibility:hidden; " src="Images/a3.png"/>
-    <img id="d27" style="position: absolute;left: 115px; top: 157px;width:100px; height:200px;visibility:hidden;" src="Images/setup.png"/>
-    <img id="d24" style="position: absolute; left: 120px; top: 157px;width:100px; height:200px;visibility:hidden;" src="Images/emptyMould.png"/>
-    <img id="d28" style="position: absolute;left: 500px; top: 90px; width:100px; height:200px;visibility:hidden;" src="Images/emptyMould.png"/>
-    <img id="d25" style="position: absolute; left: 38px; top: 290px;width:100px; height:53px;visibility:hidden;" src="Images/key.png"/>
-    <img id="d26" style="position: absolute; left: 45px; top: 290px;width:100px; height:53px;visibility:hidden;" src="Images/key.png"/>
-    <img id="d29" style="position: absolute; left: 410px; top:50px;width:400px; height:200px;visibility:hidden; " src="Images/graph.png"/>
-
-
-    <p id="can5" style="position:absolute;top: 450px; left:90px; font-family:verdana; font-size:14px;">
-    <p id="v5" style="position:absolute;left: 540.5px; top:330px;font-family:verdana; font-size:14px;"></p>
-    <p id="v51" style="position:absolute;left: 540.5px; top:330px;font-family:verdana; font-size:14px;"></p>
+<!--    <p id="va" style="position:absolute;left: 545.5px; top:330px;font-family:verdana; font-size:14px;"></p>-->
+<!--    <p id="v00" style="position:absolute;left: 545.5px; top:330px;font-family:verdana; font-size:14px;"></p>-->
   </div>
 
 
-  <!--Step5	-->
-  <div class="simsubscreen" id="canvas5" style="visibility:hidden">
+  <!--STEP 6-->
+  <div class="simsubscreen" id="canvas6" style="visibility:hidden">
+    <strong  class="incanvas">STEP </strong>
+    <span class="circlebg" >&nbsp;6&nbsp;</span>
+    <p class="steptext" style="font-family:verdana; font-size:14px;">Determination of water content.</p>
+
+    <img id="wm" style="position: absolute; left: 430px; top: 250px;visibility:hidden;" src="images/wm1.png"/>
+    <img id="ada" style="position: absolute; left: 490px; top: 370px;visibility:hidden;" src="images/on.png"/>
+    <img id="adb" style="position: absolute; left: 595px; top: 370px;visibility:hidden;" src="images/tare.png"/>
+    <img id="d191" style="position: absolute; left: 50px; top: 250px;width:277px; height:100px;cursor: move; " src="images/v1.svg"/>
+
+    <p id="can51" style="position:absolute;top: 430px; left:50px; font-family:verdana; font-size:14px;">
+    <p id="v15" style="position:absolute;left: 545.5px; top:330px;font-family:verdana; font-size:14px;"></p>
+    <p id="v511" style="position:absolute;left: 545.5px; top:330px;font-family:verdana; font-size:14px;"></p>
+  </div>
+
+
+  <!--Step 7	-->
+  <div class="simsubscreen" id="canvas7" style="visibility:hidden">
     <strong id="titlestep" class="incanvas">STEP </strong>
-    <span class="circlebg" id="stepnumber">&nbsp;5&nbsp;</span>
+    <span class="circlebg" id="stepnumber">&nbsp;7&nbsp;</span>
     <p id="pumptext" class="steptext" style="font-family:verdana; font-size:14px;">Height and Diameter of the sand pouring cylinder.</p>
 
-    <img id="e1" style="position: absolute;left: 400px; top: 300px;visibility:hidden; " src="Images/wm1.png"/>
-    <img id="ea" style="position: absolute; left: 460px; top: 420px;" src="Images/on.png"/>
-    <img id="eb" style="position: absolute; left: 565px; top: 420px;" src="Images/tare.png"/>
+    <img id="e1" style="position: absolute;left: 400px; top: 300px;visibility:hidden; " src="images/wm1.png"/>
+    <img id="ea" style="position: absolute; left: 460px; top: 420px;" src="images/on.png"/>
+    <img id="eb" style="position: absolute; left: 565px; top: 420px;" src="images/tare.png"/>
+    <img id="e6" style="position: absolute; left: 280px; top:310px;visibility:hidden; " src="images/plain.svg"/>
+    <img id="e2" style="position: absolute; left: 500px; top: 200px;width:200px; height:150px;cursor:move; " src="images/trowel.svg"/>
+    <img id="e3" style="position: absolute;left: 300px; top:350px;width:130px; height:20px;visibility:hidden; " src="images/ws.png"/>
+    <img id="e4" style="position: absolute; left: 300px; top:350px;width:130px; height:20px;visibility:hidden; " src="images/ws2.png"/>
+    <img id="e5" style="position: absolute; left: 300px; top:350px;width:130px; height:20px;visibility:hidden; " src="images/ws3.png"/>
+    <img id="e7" style="position: absolute; left: 300px; top: 200px;width:200px; height:150px;visibility:hidden; " src="images/trowels.svg"/>
+    <img id="e71" style="position: absolute; left: 100px; top: 150px;width:200px; height:150px;visibility:hidden; " src="images/trowels.svg"/>
+    <img id="e711" style="position:absolute; left:105px; top:290px; width:50px;height:50px;visibility:hidden;" src="images/pc.png"/>
+<!--    <img id="e8" style="position: absolute;left: 1px; top: 230px;width:400px; height:150px;visibility:hidden; " src="Images/2.png"/>-->
+    <img id="e10" style="position: absolute; left: 50px; top: 310px;width:150px; height:90px;visibility:hidden;  " src="images/v1.svg"/>
+    <img id="e20" style="position: absolute; left: 50px; top: 310px;width:150px; height:90px;visibility:hidden; " src="images/v2.svg"/>
+    <img id="e9" style="position: absolute; left: 50px; top: 310px;width:150px; height:90px;visibility:hidden; " src="images/v2.svg"/>
 
-    <img id="e6" style="position: absolute; left: 280px; top:310px;visibility:hidden; " src="Images/plain.svg"/>
-    <img id="e2" style="position: absolute; left: 500px; top: 200px;width:200px; height:150px;cursor:move; " src="Images/trowel.svg"/>
-    <img id="e3" style="position: absolute;left: 300px; top:350px;width:130px; height:20px;visibility:hidden; " src="Images/ws.png"/>
-    <img id="e4" style="position: absolute; left: 300px; top:350px;width:130px; height:20px;visibility:hidden; " src="Images/ws2.png"/>
-    <img id="e5" style="position: absolute; left: 300px; top:350px;width:130px; height:20px;visibility:hidden; " src="Images/ws3.png"/>
-    <img id="e7" style="position: absolute; left: 300px; top: 200px;width:200px; height:150px;visibility:hidden; " src="Images/trowels.svg"/>
-    <img id="e71" style="position: absolute; left: 100px; top: 150px;width:200px; height:150px;visibility:hidden; " src="Images/trowels.svg"/>
-    <img id="e711" style="position:absolute; left:105px; top:290px; visibility:hidden;" src="Images/pc.png"/>
-    <img id="e8" style="position: absolute;left: 1px; top: 230px;width:400px; height:150px;visibility:hidden; " src="Images/2.png"/>
-
-      <img id="e10" style="position: absolute; left: 50px; top: 310px;width:150px; height:90px;visibility:hidden;  " src="Images/v1.svg"/>
-<!--    <div class="door" id="incDoor13" style="position:absolute; width:100px; height:100px; visibility:hidden;fill:white;"></div>-->
-<!--    <img id="e11" style="position:absolute; left:320px; top:100px; width:210px;visibility: hidden;" src="Images/oven.png" />-->
-    <img id="e20" style="position: absolute; left: 50px; top: 310px;width:150px; height:90px;visibility:hidden; " src="Images/v2.svg"/>
-<!--    <img id="e12" style="position: absolute; left: 325px; top: 155px;width:190px;visibility:hidden;" title="door" src="Images/door.png"/>-->
-<!--    <img id="e14" style="position:absolute; left:350px; top:215px; cursor:pointer;visibility: hidden;" src="Images/ovenknob.png" />-->
-    <img id="e9" style="position: absolute; left: 50px; top: 310px;width:150px; height:90px;visibility:hidden; " src="Images/v2.svg"/>
-
-    <p id="can6" style="position:absolute;left: 410px; top:430px;font-family:verdana; font-size:14px;"></p>
-    <p id="v6" style="position:absolute;left: 620.5px; top:160px;font-family:verdana; font-size:14px;"></p>
-    <p id="can7" style="position:absolute;top: 450px; left:90px; font-family:verdana; font-size:14px;"></p>
     <p id="v7" style="position:absolute;left: 520.5px; top:380px;font-family:verdana; font-size:14px;"></p>
-    <p id="can8" style="position:absolute;top: 450px; left:90px; font-family:verdana; font-size:14px;"></p>
+    <p id="can8" style="position:absolute;top: 150px; left:50px; font-family:verdana; font-size:14px;"></p>
     <p id="v8" style="position:absolute;left: 520.5px; top:380px;font-family:verdana; font-size:14px;"></p>
-    <p id="can9" style="position:absolute;top: 450px; left:90px; font-family:verdana; font-size:14px;"></p>
-    <p id="v9" style="position:absolute;left: 520.5px; top:380px;font-family:verdana; font-size:14px;"></p>
-    <p id="can10" style="position:absolute;top: 450px; left:90px; font-family:verdana; font-size:14px;"></p>
-    <p id="v10" style="position:absolute;left: 520.5px; top:380px;font-family:verdana; font-size:14px;"></p>
+
+    <p id="v70" style="position:absolute;left: 520.5px; top:380px;font-family:verdana; font-size:14px;"></p>
+    <p id="can80" style="position:absolute;top: 350px; left:50px; font-family:verdana; font-size:14px;"></p>
+    <p id="v80" style="position:absolute;left: 520.5px; top:380px;font-family:verdana; font-size:14px;"></p>
+
   </div>
 
-<!--step 6-->
-    <div id="canvas6" class="simsubscreen" style="visibility:hidden;">
-<strong class="incanvas">STEP</strong>
-<span class="circlebg">&nbsp;6&nbsp;</span>
-<p class="steptext">&nbsp;Place the container with wet soil in the oven for 24 hours at 110&deg;C temperature.</p>
-<div id="13-12" style="position:absolute; left:116px; top:126px; width:40px; height:17.5px; background-color:#D3D3D3; font-weight:bold; font-size:14px;" >&nbsp;31</div>
-<img id="13-1" style="position:absolute; left:20px; top:100px; width:210px;" src="Images/oven.png" />
-<div id="13-13" style="position:absolute; left:168px; top:124px; width:20.25px; height:18.5px; background-color:transparent; font-weight:bold; font-size:14px; cursor:pointer;" title="Increase Temperature"></div>
-<div id="13-14" style="position:absolute; left:192.5px; top:124px; width:20.25px; height:18.5px; background-color:transparent; font-weight:bold; font-size:14px; cursor:pointer;" title="Decrease Temperature"></div>
 
-<img id="13-3b" style="position:absolute; left:75px; top:445px; " src="Images/cs.png" />
-<img id="13-3a" style="position:absolute; left:70px; top:425px;" src="Images/container.png" />
+  <!--step 8-->
+  <div id="canvas8" class="simsubscreen" style="visibility:hidden;">
+    <strong class="incanvas">STEP</strong>
+    <span class="circlebg">&nbsp;8</span>
 
-<div class="door" id="incDoor13-1" ></div>
-<div class="door" id="incDoor13-2" style="visibility:hidden;"></div>
-<div class="door" id="incDoor13-3" style="visibility:hidden;"></div>
-<img id="13-11" style="position:absolute; left:35px; top:225px; cursor:pointer;" src="Images/ovenknob.png" />
-<div id="13-2" style="position:absolute; left:0px; top:0px; width:750px; height:550px; background-color:white; visibility:hidden;"></div>
-<h1 id="13-3" style="position:absolute;  left:225px; top:225px; color:grey; text-align:center; display:none;">After 24 hours</h1>
-</div>
+    <p class="steptext">&nbsp;Place the container with wet soil in the oven for 24 hours at 115&deg;C temperature.</p>
+    <div id="13-12" style="position:absolute; left:116px; top:126px; width:40px; height:17.5px; background-color:#D3D3D3; font-weight:bold; font-size:14px;" >&nbsp;105</div>
+    <img id="13-1" style="position:absolute; left:20px; top:100px; width:210px;" src="images/oven.png" />
+    <div id="13-13" style="position:absolute; left:168px; top:124px; width:20.25px; height:18.5px; background-color:transparent; font-weight:bold; font-size:14px; cursor:pointer;" title="Increase Temperature"></div>
+    <div id="13-14" style="position:absolute; left:192.5px; top:124px; width:20.25px; height:18.5px; background-color:transparent; font-weight:bold; font-size:14px; cursor:pointer;" title="Decrease Temperature"></div>
+    <img id="13-3a" style="position: absolute; left: 50px; top: 415px;width:150px; height:90px; " src="images/v2.svg"/>
+    <div class="door" id="incDoor13-1" ></div>
+<!--    <div class="door" id="incDoor13-2" style="visibility:hidden;"></div>-->
+<!--    <div class="door" id="incDoor13-3" style="visibility:hidden;"></div>-->
+    <img id="13-11" style="position:absolute; left:35px; top:225px; cursor:pointer;" src="images/ovenknob.png" />
+    <div id="13-2" style="position:absolute; left:0px; top:0px; width:750px; height:550px; background-color:white; visibility:hidden;"></div>
+    <h1 id="13-3" style="position:absolute;  left:225px; top:225px; color:grey; text-align:center; display:none;">After 24 hours</h1>
+  </div>
+
+  <!--step 9-->
+  <div id="canvas9" class="simsubscreen" style="visibility:hidden;">
+    <strong class="incanvas">STEP</strong>
+    <span class="circlebg">&nbsp;9&nbsp;</span>
+    <p class="steptext">&nbsp;Place the container with wet soil in the oven for 24 hours at 110&deg;C temperature.</p>
+
+    <img id="2" style="position: absolute;left: 400px; top: 300px;visibility:hidden; " src="images/wm1.png"/>
+    <img id="fa" style="position: absolute; left: 460px; top: 420px;visibility: hidden;" src="images/on.png"/>
+    <img id="fb" style="position: absolute; left: 565px; top: 420px;visibility: hidden;" src="images/tare.png"/>
+    <img id="13-a" style="position: absolute; left: 50px; top: 415px;width:150px; height:90px;cursor: move; " src="images/v2.svg"/>
+
+    <p id="can" style="position:absolute;top: 150px; left:90px; font-family:verdana; font-size:14px;"></p>
+        <p id="canc" style="position:absolute;top: 200px; left:90px; font-family:verdana; font-size:14px;"></p>
+
+    <p id="v" style="position:absolute;left: 520.5px; top:380px;font-family:verdana; font-size:14px;"></p>
+    <p id="w" style="position:absolute;top: 380px; left:520.5px; font-family:verdana; font-size:14px;"></p>
+    <p id="w11" style="position:absolute;left: 520.5px; top:380px;font-family:verdana; font-size:14px;"></p>
+  </div>
+
 
 
   <!-- // Obsevations -->
-  <div class="simsubscreen" id="canvas7" style="visibility: hidden">
-    <h2>Observations</h2>
+  <div class="simsubscreen" id="canvas10" style="visibility: hidden">
 
-    <div>
-      <p id="can06" style="position:absolute;top: 330px; font-family:verdana; font-size:14px;">Weight of sand in Calibrating Cylinder=<br>(w1-w2-w3) </p>
-      <input id="t1" type="text" onfocus="this.value=''" style="border-bottom:1px solid black;position:absolute;left:310px;top:340px;width:90px;"></p>
-      <input id="check1" type="button" style="border-bottom: 1px solid black; position: absolute; left:470px;top:340px;" value="check">
-      <span id="abc" style="position:absolute;left: 400px; top:330px;font-family:verdana; font-size:20px;color:blue;visibility:hidden;">&#10004;</span>
-      <span id="bca" style="position:absolute;left: 400px; top:330px;font-family:verdana;font-size:20px;color:red;visibility:hidden;">&#10007;</span>
-      <input id="r1" type="button" style="border-bottom: 1px solid black; position: absolute;left:540px;top:340px;" value="Result">
-      <span id="f1" class="tooltip" style="border-bottom:1px dotted ; color:red;text-align:justify;position:absolute;left:620px;top:340px;">Formula
+    <h3 style="position:absolute; left:-45px; top:-10px;">&nbsp;Observations:</h3>
+<table style="position:absolute; left:-35px; top:30px; border:1px solid black; font-size:14px;  text-align:center;">
+<tr>
+<td style="border:1px solid black; padding:5px;">weight of sand pouring cylinder + sand , W<sub>1</sub> in gms</td>
+<td id="a01" style="border:1px solid black; padding:5px;">6595</td>
+</tr>
+<tr>
+<td style="border:1px solid black; padding:5px;">weight of calibrating container + sand  W<sub>2</sub>, in gms</td>
+<td id="a02" style="border:1px solid black; padding:5px;">3970</td>
+</tr>
+<tr>
+<td style="border:1px solid black; padding:5px;">weight of empty calibrating container W<sub>3</sub>, in gms</td>
+<td id="a03" style="border:1px solid black; padding:5px;">1900</td>
+</tr>
+<tr>
+<td style="border:1px solid black; padding:5px;">weight of sand in cone portion W<sub>4</sub>, in gms</td>
+<td id="a04" style="border:1px solid black; padding:5px;">280</td>
+</tr>
+  <tr>
+    <td style="border:1px solid black; padding:5px;">weight of sand in calibrating container without cone portion (W<sub>5</sub> or W<sub>a</sub>) = (W<sub>2</sub>-W<sub>3</sub>-W<sub>4</sub>)</td>
+<td id="a05" style="border:1px solid black; padding:5px;">1790</td>
+</tr>
+</table>
 
-        <span style="width:100px" class="tooltiptext">
-(W<sub>1</sub>-W<sub>2</sub>-W<sub>3</sub>)
-</span>
-</span>
-      <p id="value1" style="position:absolute;left: 330px; top:330px;font-family:verdana; font-size:14px;visibility:hidden;"><u>1444 gm</u></p>
+
+<h3 style="position:absolute; left:-45px; top:190px;">&nbsp;Measurement of soil density:</h3>
+<table style="position:absolute; left:-35px; top:230px; border:1px solid black; font-size:14px;  text-align:left;">
+<tr>
+<td style="border:1px solid black; padding:5px;">weight of sand pouring cylinder + sand after poured in to the hole W<sub>6</sub> in gms</td>
+<td style="border:1px solid black; padding:5px;">4855</td>
+</tr>
+<tr>
+<td style="border:1px solid black; padding:5px;">weight of wet soil from the hole Ww in gms</td>
+<td style="border:1px solid black; padding:5px;">1540</td>
+</tr>
+<tr>
+<td style="border:1px solid black; padding:5px;">weight of sand in hole W<sub>b</sub> = (W<sub>1</sub>-W<sub>6</sub>) in gms</td>
+<td style="border:1px solid black; padding:5px;">1740</td>
+</tr>
+</table>
 
 
-              <div id="div1"  style="visibility: hidden;">
 
-                <div class="input">
-      <p id="can07" style="position:absolute;top: 390px; font-family:verdana; font-size:14px;">Weight of sand in Calibrating Cylinder=<br>(w1-w2-w3)/PI/4*(d<sub>2</sub>h)</p>
-      <input id="t2" type="text" onfocus="this.value=''" style="border-bottom:1px solid black;position:absolute;left:310px;top:405px;width:90px;">
-      <input id="check2" type="button" style="border-bottom: 1px solid black; position: absolute; left:470px;top:400px; " value="check">
-      <span id="abc11" style="position:absolute;left: 400px; top:390px;font-family:verdana; font-size:20px;color:blue;visibility:hidden;">&#10004;</span>
-      <span id="bca11" style="position:absolute;left: 400px; top:390px;font-family:verdana;font-size:20px;color:red;visibility:hidden;">&#10007;</span>
-      <input id="r2" type="button" style="border-bottom: 1px solid black; position: absolute;left:540px;top:400px; " value="Result">
+   <h3 style="position:absolute; left:-45px; top:330px;">&nbsp;Water content determination:</h3>
+<table style="position:absolute; left:-35px; top:380px; border:1px solid black; font-size:14px;  text-align:left;">
+<tr>
+<td style="border:1px solid black; padding:5px;">weight of container with lid (W<sub>1</sub>) in gms</td>
+<td style="border:1px solid black; padding:10px;"></td>
+</tr>
+<tr>
+<td style="border:1px solid black; padding:5px;">weight of wet soil with lid (W<sub>2</sub>) in gms</td>
+<td style="border:1px solid black; padding:5px;"></td>
+</tr>
+<tr>
+<td style="border:1px solid black; padding:5px;">weight of dry soil with lid (W<sub>3</sub>) in gms</td>
+<td style="border:1px solid black; padding:5px;"></td>
+</tr>
 
-      <span id="f2" class="tooltip"  style="border-bottom:1px dotted ; color:red;text-align:justify;position:absolute;left:620px;top:400px;">Formula
-<span style="width:200px" class="tooltiptext">
-(W<sub>1</sub>-W<sub>2</sub>-W<sub>3</sub>)/&pi;/4 * (d<sup>2</sup>h)
-</span>
-</span>
+<tr>
+<td style="border:1px solid black; padding:5px;">moisture content W = ((W<sub>2</sub>-W<sub>3</sub>)/(W<sub>3</sub>-W<sub>1</sub>))</td>
+<td style="border:1px solid black; padding:5px;"></td>
+</tr>
+</table>
 
-      <p id="value2" style="position:absolute;left:330px;top:390px;font-family:verdana; font-size:14px;visibility:hidden;"><u>1.4708 gm</u></p>
-                </div>
-              </div>
-                    <div id="div2"  style="visibility: hidden;">
 
-                <div class="input">
 
-      <p id="can08" style="position:absolute;top: 450px;  font-family:verdana; font-size:14px;">Weight of sand in Calibrating Cylinder=<br>w1=((b-c)/(c-a)*100)</p>
-      <input id="t3" type="text" onfocus="this.value=''" style="border-bottom:1px solid black;position:absolute;left:310px;top:465px;width:90px;">
-      <input id="check3" type="button" style="border-bottom: 1px solid black; position: absolute; left:470px;top:465px;" value="check">
-      <span id="abc22" style="position:absolute;left: 400px; top:460px;font-family:verdana; font-size:20px;color:blue;visibility:hidden;">&#10004;</span>
-      <span id="bca22" style="position:absolute;left: 400px; top:460px;font-family:verdana;font-size:20px;color:red;visibility:hidden;">&#10007;</span>
-      <input id="r3" type="button" style="border-bottom: 1px solid black; position: absolute;  left:540px;top:465px;  " value="Result">
 
-      <span id="f3" class="tooltip" style="border-bottom:1px dotted ; color:red;text-align:justify;position:absolute;left:620px;top:465px;">Formula
-<span style="width:180px" class="tooltiptext">
-W<sub>1</sub>=((b-c)/(c-a)*100)
-</span>
-</span>
-      <p id="value3" style="position:absolute;left:330px;top:450px;font-family:verdana; font-size:14px;visibility:hidden;"><u>12.027 %</u></p>
-                </div>
-    </div>
-    <table style="">
-      <tr>
-        <td>Weight of Sand Pouring Cylinder with Sand,(W<sub>1</sub>)</td>
-        <td id="a01"></td>
-      </tr>
-      <tr>
-        <td>Weight of Sand in Conical Portion,(W<sub>2</sub>)</td>
-        <td id="a02"></td>
-      </tr>
-      <tr>
-        <td>Weight of Sand Pouring Cylinder+Sand,after filling
-          <br>Calibrating Cylinder and Conical Portion,(W<sub>3</sub>)</td>
-        <td id="a03"></td>
-      </tr>
-      <tr>
-        <td>Weight of Sand Pouring Cylinder+Remaining Sand,after <br>filling Calibrating Cylinder and Conical Portion,(W<sub>4</sub>) </td>
-        <td id="a04"></td>
-      </tr>
-      <tr>
-        <td>Weight of Empty Cup, a (gm)</td>
-        <td id="a05"></td>
-      </tr>
-      <tr>
-        <td>Weight of Cup+Wet Soil, b (gm)</td>
-        <td id="a06"></td>
-      </tr>
-      <tr>
-        <td>Weight of cup+Dry Soil, c (gm)</td>
-        <td id="a07"></td>
-      </tr>
-    </table>
 
-    <h3 style="position:absolute; left:-5px; top:300px;">&nbsp;Calculations:</h3>
+<h3 style="position:absolute; left:360px; top:-10px;">&nbsp;Calculations:</h3>
+<table style="position:absolute; left:370px; top:50px;  font-size:14px;  text-align:left;">
+<tr>
+<td style="padding:5px;">Bulk density, <sup>&rho;</sup><sub>b</sub> =</td>
+<td id="" style="padding:10px;">
+	<span class="frac"><sup>W<sub>w</sub></sup><span>&frasl;</span><sub>V<sub>c</sub></sub></span> =
+	<input id="wd" type="text" style=" border:none; border-bottom-style:double; width:55px;" required > g/cc
+	<span id="mark1" style="font-size:22px; visibility:hidden;" ></span>
+</td>
+</tr>
+<tr>
+<td style="padding:5px;"></td>
+<td id="" style="padding:15px;">
+	<input id="chk1" class="clsBtn" type="button" name="check" value="Check" />
+	<input id="res1" class="clsBtn" type="button" name="Formula" value="Result" disabled />
+</td>
+</tr>
+<tr>
 
+<td style="padding:5px;">Water content, W =</td>
+<td id="" style="padding:10px;"><span class="frac"><sup>W<sub>2</sub>-W<sub>3</sub></sup><span>&frasl;</span><sub>W<sub>3</sub>-W<sub>1</sub></sub></span> x 100</td>
+</tr>
+<tr>
+<td style="padding:5px; text-align:right;">=</td>
+<td id="" style="padding:10px;">
+	<input id="wc" type="text" style=" border:none; border-bottom-style:double; width:55px;" required >%
+	<span id="mark2" style="font-size:22px; visibility:hidden;" ></span>
+</td>
+</tr>
+<tr>
+<td style="padding:5px;"></td>
+<td id="" style="padding:10px;">
+	<input id="chk2" class="clsBtn" type="button" name="check" value="Check" />
+	<input id="res2" class="clsBtn" type="button" name="Formula" value="Result" disabled />
+</td>
+</tr>
+
+<tr>
+<td style="padding:5px;">Dry Density, <sup>&rho;</sup><sub>dry</sub> =</td>
+<td id="" style="padding:10px;">
+	<span class="frac"><sup><sup>&rho;</sup><sub>b</sub></sup><span>&frasl;</span><sub>1+W</sub></span> =
+	<input id="dd" type="text" style=" border:none; border-bottom-style:double; width:55px;" required > g/cc
+	<span id="mark3" style="font-size:22px; visibility:hidden;"></span>
+</td>
+</tr>
+<tr>
+<td style="padding:5px;"></td>
+<td id="" style="padding:10px;">
+	<input id="chk3" class="clsBtn" type="button" name="check" value="Check"/>
+	<input id="res3" class="clsBtn" type="button" name="Formula" value="Result" disabled />
+</td>
+</tr>
+</table>
+<div id="sheet1" style="position:absolute; left:370px; top:160px; width:375px; height:175px; background-color:#ffffff;"></div>
+<div id="sheet2" style="position:absolute; left:370px; top:320px; width:375px; height:175px; background-color:#ffffff;"></div>
+</div>
+
+
+
+  <div class="simsubscreen" id="canvas11" style="visibility:hidden;">
+    <strong class="incanvas" id="ob">
+      <h3>
+        Result:
+      </h3>
+    </strong>
+    <p id="l1" style="font-size:14px;position:absolute;top:70px;visibility:hidden;">1. Average percolation rate of the soil is for Sandy soil= 1.65 mL/min.</p>
+    <p id="l2" style="font-size:14px;position:absolute;top:70px;visibility:hidden;">1. Average percolation rate of the soil is for Silty soil= 0.72 mL/min</p>
   </div>
+
+  <!--next  Arrow	-->
+  <div id="nav">
+    <img id="nextButton" onclick="navNext(); " src="Images/Next.png" />
+  </div>
+
+  <!--Blinking Arrow	-->
+  <img class ="" id="arrow1" style="visibility:hidden" height="3px" width="30px" src="Images/arrow1.png"/>
+
+  <div id="copyright"> &copy; 2019 - <script>document.write(new Date().getFullYear())</script> SOLVE - The Virtual Lab @ NITK Surathkal, Department of Water Resources & Ocean Engineering</div>
 </div>
-
-<!--next  Arrow	-->
-<div id="nav">
-  <img id="nextButton" onclick="navNext(); " src="Images/Next.png" />
-</div>
-
-<!--Blinking Arrow	-->
-<img class ="" id="arrow1" style="visibility:hidden" height="3px" width="30px" src="Images/arrow1.png"/>
-
-<div id="copyright"> &copy; 2019-21 SOLVE - The Virtual Lab @ NITK Surathkal, Department of Water Resource Ocean Engineering</div>
 </body>
 </html>
