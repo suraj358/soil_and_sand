@@ -1,10 +1,16 @@
-var array=[[6595,3970,1900,280,1790,6595,59.34],
-    [4855,7549,1540,1554,1740,65.17,60.73],
-    [2125,7594,5547,1448,11.38,66.15,61.48],
-    [2110,7440,5546,1454,11.35,65.28,60.75],
-    [2143,7425,2210,1410,12.75,68.30,62.22]];
-var p = Math.floor(Math.random() * (5 - 0) + 0);
-var mldDia = 10, mldHght=13, hdr=31, layerNo=3, compEnergy=3, mldWght=990, mldVol=1021.01;
+var dataset=[[6595,3970,1900,280,1790,1],
+    [180,3866,27,76,69.5,2],
+    [200,3970,33.5,67,62,3],
+    [220,4059,34,79,72,4],
+    [240,4154,41,100,89,5],
+    [260,4157,45,84.5,76.8,6],
+    [280,4174,15.5,30,27,7],
+    [300,4049,17.4,27,25,8],
+    [320,4036,17,29,26.5,9],
+    [340,4024,16.5,38.5,32.5,10]];
+
+
+var mldDia = 10, mldHght=13, hdr=31, layerNo=3, compEnergy=3, mldWght=2181, mldVol=1021.01;
 
 var cnt=0;
 var repeat=0;
@@ -12,6 +18,7 @@ var repeat=0;
 var p=0;
 var d=".00";
 var data=0;
+
 function IsInt(num)
 {
     if(Number.isInteger(num))
@@ -61,6 +68,20 @@ function myStopFunction()
     document.getElementById('arrow1').style.visibility="hidden";
 }
 
+function generate_table()
+{
+    var j=0;
+    var table = document.getElementById("dataTable");
+    for(var i=2;i>=0;i--)
+    {
+        $("#dataTable").delay()
+            .queue(function (generate_table) {
+                $(this).append("<tr><td>" + dataset[j][7] +  "</td><td>"+990+"</td><td>"+1670+"</td><td>"+1021.01+"</td><td>"+1.635+"</td><td>"+dataset[j][1]+"</td><td>" + dataset[j][2] + "</td><td>" + dataset[j][3] + "</td><td>" + dataset[j][6]+ "</td><td>"+dataset[j][8] +"</td></tr>");
+                j++;
+                generate_table();
+            });
+    }
+}
 
 //-------------------------------------function magic starts here----------------------------------------------------
 function magic() {
@@ -77,6 +98,9 @@ function magic() {
         document.getElementById("arrow1").style.WebkitTransform = "rotate(180deg)";
         document.getElementById("arrow1").style.msTransform = "rotate(180deg)";
         document.getElementById("arrow1").style.transform = "rotate(180deg)";
+        document.getElementById('trial').style = "visibility:visible; left: 700px; top: 80px;position: absolute;font-weight: bold;text-transform: uppercase;";
+        document.getElementById('trial').innerHTML = "Trial : " + 1;
+
         document.getElementById('a2').onclick = function () {
             myStopFunction();
             document.getElementById('a2').onclick = "";
@@ -118,6 +142,8 @@ function magic() {
                                     document.getElementById('tx').style.visibility = "visible";
                                     document.getElementById('q').style.visibility = "visible";
                                     document.getElementById('ch').style.visibility = "visible";
+                                    document.getElementById('cap1').style.visibility = "visible";
+
                                     document.getElementById('ch').onclick = function () {
                                         if (document.getElementById('tx').value == "") {
                                             alert("Enter the value to proceed");
@@ -162,12 +188,8 @@ function magic() {
         }
 
 
-
-
-
-
     } else if (simsubscreennum == 2) {
-
+        document.getElementById('cap1').style.visibility = "hidden";
         document.getElementById('canh').style.visibility = "hidden";
         document.getElementById('cand').style.visibility = "hidden";
         document.getElementById('cal').style.visibility = "hidden";
@@ -267,7 +289,7 @@ function magic() {
                                                         document.getElementById('can3').innerHTML = "Weight of Sand Pouring Cylinder with sand, (W<sub>1</sub>)  =  <u>6595  gm</u>";
                                                         document.getElementById('v3').innerHTML = "6595";
                                                         document.getElementById('nextButton').style.visibility = "visible";
-                                                    }, 500);
+                                                    }, 1200);
                                                 }
                                             }, 1000);
                                         }
@@ -275,7 +297,6 @@ function magic() {
                                         // }
                                     }, 500);
                                 }
-
 
 
                             }, 800);
@@ -426,7 +447,7 @@ function magic() {
                                                                                         document.getElementById('v4').style.visibility = "hidden";
                                                                                         document.getElementById('c10').style.visibility = "hidden";
                                                                                         document.getElementById('cb').style.visibility = "hidden";
-                                                                                        document.getElementById('can40').innerHTML = "weight of empty calibrating container (W<sub>3</sub>),in gms  =  <u>1900 gm</u>";
+                                                                                        document.getElementById('can40').innerHTML = "Weight of empty calibrating container (W<sub>3</sub>), in gms  =  <u>1900 gm</u>";
                                                                                         document.getElementById('v40').innerHTML = "1900";
                                                                                         document.getElementById('nextButton').style.visibility = "visible";
                                                                                     }, 500);
@@ -449,8 +470,6 @@ function magic() {
                 }, 1000);
             }, 1500);
         }
-
-
 
 
     } else if (simsubscreennum == 4) {
@@ -582,8 +601,10 @@ function magic() {
                                                                             document.getElementById('c13').style.visibility = "hidden";
                                                                             document.getElementById('c15').style.visibility = "visible";
                                                                             document.getElementById('can4a').style.visibility = "visible";
-                                                                            document.getElementById('can41a').innerHTML = "weight of sand in cone portion W<sub>4</sub>in gms =  <u>280  gms</u>";
-                                                                            document.getElementById('can41aa').innerHTML = "weight of sand in calibrating container without cone portion (W5 or Wa) = (W2-W3-W4) =  <u>1790  gms</u>";
+                                                                            document.getElementById('can41a').innerHTML = "Weight of calibrating container + sand  (W<sub>2</sub>) in gms =  <u>3970  gms</u>";
+                                                                            document.getElementById('1can4').innerHTML = "Weight of empty calibrating container   (W<sub>3</sub>) in gms =  <u>1900  gms</u>";
+                                                                            document.getElementById('2can4').innerHTML = "Weight of sand in cone portion, W<sub>4</sub> in gms =  <u>280  gms</u>";
+                                                                            document.getElementById('can41aa').innerHTML = "Weight of sand in calibrating container without cone portion <br> (W<sub>5</sub> or W<sub>a</sub>) = (W<sub>2</sub>-W<sub>3</sub>-W<sub>4</sub>) =  <u>1790  gms</u>";
                                                                             document.getElementById('v41a').innerHTML = "280";
                                                                             document.getElementById('nextButton').style.visibility = "visible";
                                                                         }, 500);
@@ -608,6 +629,9 @@ function magic() {
         document.getElementById('c15').style.visibility = "hidden";
         document.getElementById('can4').style.visibility = "hidden";
         document.getElementById('v4').style.visibility = "hidden";
+
+        document.getElementById('1can4').style.visibility = "hidden";
+        document.getElementById('2can4').style.visibility = "hidden";
 
         myInt = setInterval(function () {
             animatearrow();
@@ -887,10 +911,8 @@ function magic() {
                                                                                                                         document.getElementById('d29').style.visibility = "hidden";
                                                                                                                     }, 500);
                                                                                                                     setTimeout(function () {
-                                                                                                                        document.getElementById('can5').innerHTML = "weight of sand pouring cylinder + sand after poured in to the hole in gms W<sub>6</sub> =  <u>4855gms</u>";
+                                                                                                                        document.getElementById('can5').innerHTML = "Weight of sand pouring cylinder + sand after poured in to the hole in gms, W<sub>6</sub> =  <u>4855gms</u>";
                                                                                                                         document.getElementById('v5').innerHTML = "4855";
-
-
 
 
                                                                                                                         setTimeout(function () {
@@ -921,37 +943,37 @@ function magic() {
                                                                                                                                         document.getElementById('db').onclick = " ";
                                                                                                                                         document.getElementById('v5').innerHTML = "00.00";
 
+                                                                                                                                        myStopFunction();
+                                                                                                                                        document.getElementById('d27').style.visibility = "hidden";
+                                                                                                                                        document.getElementById('can5').style.visibility = "hidden";
+                                                                                                                                        document.getElementById('d24').style.visibility = "hidden";
+                                                                                                                                        document.getElementById('d28').style.visibility = "hidden";
+                                                                                                                                        document.getElementById('pl').style.visibility = "visible";
+                                                                                                                                        document.getElementById('db').onclick = " ";
+                                                                                                                                        document.getElementById('v5').innerHTML = "00.00";
+                                                                                                                                        setTimeout(function () {
                                                                                                                                             myStopFunction();
-                                                                                                                                            document.getElementById('d27').style.visibility = "hidden";
-                                                                                                                                            document.getElementById('can5').style.visibility = "hidden";
-                                                                                                                                            document.getElementById('d24').style.visibility = "hidden";
-                                                                                                                                            document.getElementById('d28').style.visibility = "hidden";
-                                                                                                                                            document.getElementById('pl').style.visibility = "visible";
-                                                                                                                                            document.getElementById('db').onclick = " ";
-                                                                                                                                            document.getElementById('v5').innerHTML = "00.00";
-                                                                                                                                            setTimeout(function () {
+                                                                                                                                            myInt = setInterval(function () {
+                                                                                                                                                animatearrow();
+                                                                                                                                            }, 500);
+                                                                                                                                            document.getElementById('arrow1').style = "visibility:visible ;position:absolute; left: 130px; top: 430px; height: 30px; z-index: 10;";
+                                                                                                                                            document.getElementById("arrow1").style.WebkitTransform = "rotate(180deg)";
+                                                                                                                                            document.getElementById("arrow1").style.msTransform = "rotate(180deg)";
+                                                                                                                                            document.getElementById("arrow1").style.transform = "rotate(180deg)";
+                                                                                                                                            document.getElementById('pl').onclick = function () {
                                                                                                                                                 myStopFunction();
-                                                                                                                                                myInt = setInterval(function () {
-                                                                                                                                                    animatearrow();
-                                                                                                                                                }, 500);
-                                                                                                                                                document.getElementById('arrow1').style = "visibility:visible ;position:absolute; left: 130px; top: 430px; height: 30px; z-index: 10;";
-                                                                                                                                                document.getElementById("arrow1").style.WebkitTransform = "rotate(180deg)";
-                                                                                                                                                document.getElementById("arrow1").style.msTransform = "rotate(180deg)";
-                                                                                                                                                document.getElementById("arrow1").style.transform = "rotate(180deg)";
-                                                                                                                                                document.getElementById('pl').onclick = function () {
-                                                                                                                                                    myStopFunction();
-                                                                                                                                                    document.getElementById('pl').style.animation = "move9 1s  forwards";
-                                                                                                                                                    setTimeout(function () {
-                                                                                                                                                        document.getElementById('pl').style.visibility = "visible";
-                                                                                                                                                        document.getElementById('v5').style.visibility = "hidden";
-                                                                                                                                                        document.getElementById('can50').innerHTML = "weight of empty calibrating container (W<sub>3</sub>),in gms  =  <u>1900 gm</u>";
-                                                                                                                                                        document.getElementById('v510').innerHTML = "1900";
+                                                                                                                                                document.getElementById('pl').style.animation = "move9 1s  forwards";
+                                                                                                                                                setTimeout(function () {
+                                                                                                                                                    document.getElementById('pl').style.visibility = "visible";
+                                                                                                                                                    document.getElementById('v5').style.visibility = "hidden";
+                                                                                                                                                    document.getElementById('can50').innerHTML = "Weight of empty calibrating container (W<sub>3</sub>), in gms  =  <u>1900 gm</u>";
+                                                                                                                                                    document.getElementById('v510').innerHTML = "1900";
 
-                                                                                                                                                        document.getElementById('can500').innerHTML = "weight of sand in hole W<sub>b</sub> = (W<sub>1</sub>-W<sub>6</sub>),in gms  =  <u>1740 gm</u>";
-                                                                                                                                                        document.getElementById('nextButton').style.visibility = "visible";
-                                                                                                                                                    }, 1500);
-                                                                                                                                                }
-                                                                                                                                            }, 1000);
+                                                                                                                                                    document.getElementById('can500').innerHTML = "Weight of sand in hole W<sub>b</sub> = (W<sub>1</sub>-W<sub>6</sub>), in gms  =  <u>1740 gm</u>";
+                                                                                                                                                    document.getElementById('nextButton').style.visibility = "visible";
+                                                                                                                                                }, 1500);
+                                                                                                                                            }
+                                                                                                                                        }, 1000);
                                                                                                                                     }
                                                                                                                                 }, 500);
                                                                                                                             }
@@ -963,11 +985,6 @@ function magic() {
                                                                                                         }
                                                                                                     }, 1100);
                                                                                                 }
-
-
-
-
-
 
 
                                                                                             }, 1500);
@@ -984,7 +1001,7 @@ function magic() {
                                                 }
                                             }, 1100);
                                         }
-                                    }, 2000);
+                                    }, 8000);
                                 }
                             }, 600);
                         }, 500);
@@ -992,9 +1009,23 @@ function magic() {
                 }, 1200);
             }, 1500);
         }
-    }
+    } else if (simsubscreennum == 6) {
+        // repeat+=1;
+        refresh();
 
-    else if (simsubscreennum == 6) {
+        // for(var i=1; i<=6; i++)
+        // {
+            // document.getElementById("2-"+i).style.visibility="hidden";
+            // document.getElementById("3-"+i).style.visibility="hidden";
+            // document.getElementById("4-"+i).style.visibility="hidden";
+            // document.getElementById("5-"+i).style.visibility="hidden";
+        // }
+        //         document.getElementById('trial').style.visibility = "visible";
+        document.getElementById('mark1').style.visibility="hidden";
+        document.getElementById('mark2').style.visibility="hidden";
+        document.getElementById('mark3').style.visibility="hidden";
+        // document.getElementById('trial').style="visibility:visible; left: 700px; top: 100px;position: absolute;font-weight: bold;text-transform: uppercase;";
+        // document.getElementById('trial').innerHTML="Trial : " + repeat;
 
         document.getElementById('d28').style.visibility = "hidden";
         document.getElementById('d19').style.visibility = "hidden";
@@ -1007,7 +1038,7 @@ function magic() {
         document.getElementById('wm').style.visibility = "visible";
         document.getElementById('ada').style.visibility = "visible";
         document.getElementById('adb').style.visibility = "visible";
-
+        //
         myInt = setInterval(function () {
             animatearrow();
         }, 500);
@@ -1015,6 +1046,7 @@ function magic() {
         document.getElementById("arrow1").style.WebkitTransform = "rotate(90deg)";
         document.getElementById("arrow1").style.msTransform = "rotate(90deg)";
         document.getElementById("arrow1").style.transform = "rotate(90deg)";
+
         document.getElementById('ada').onclick = function () {
             myStopFunction();
             document.getElementById('ada').onclick = " ";
@@ -1023,9 +1055,7 @@ function magic() {
 
             setTimeout(function () {
                 myStopFunction();
-                myInt = setInterval(function () {
-                    animatearrow();
-                }, 500);
+                myInt = setInterval(function () {animatearrow();}, 500);
                 document.getElementById('arrow1').style = "visibility:visible ;position:absolute; left: 650px; top: 440px; height: 30px; z-index: 10;";
                 document.getElementById("arrow1").style.WebkitTransform = "rotate(90deg)";
                 document.getElementById("arrow1").style.msTransform = "rotate(90deg)";
@@ -1037,9 +1067,7 @@ function magic() {
 
                     setTimeout(function () {
                         myStopFunction();
-                        myInt = setInterval(function () {
-                            animatearrow();
-                        }, 500);
+                        myInt = setInterval(function () {animatearrow();}, 500);
                         document.getElementById('arrow1').style = "visibility:visible ;position:absolute; left: 150px; top: 330px; height: 30px; z-index: 10;";
                         document.getElementById("arrow1").style.WebkitTransform = "rotate(180deg)";
                         document.getElementById("arrow1").style.msTransform = "rotate(180deg)";
@@ -1050,7 +1078,7 @@ function magic() {
                             setTimeout(function () {
                                 document.getElementById('can51').style.visibility = "visible";
                                 document.getElementById('d191').style.visibility = "visible";
-                                document.getElementById('can51').innerHTML = "weight of container with lid (W<sub>1</sub>) in gms = <u>28.30</u> gm";
+                                document.getElementById('can51').innerHTML = "Weight of container with lid (W<sub>1</sub>), in gms = <u>28.30</u> gm";
                                 document.getElementById('v15').innerHTML = "28.30";
                                 document.getElementById('nextButton').style.visibility = "visible";
                             }, 500);
@@ -1060,22 +1088,41 @@ function magic() {
             }, 1100);
         }
         // }, 2500);
-    }
-    else if (simsubscreennum == 7) {
+    } else if (simsubscreennum == 7) {
 
-        document.getElementById("wm").style.visibility="hidden";
-        document.getElementById("ada").style.visibility="hidden";
-        document.getElementById("adb").style.visibility="hidden";
-        document.getElementById("d191").style.visibility="hidden";
+        refresh();
+                // for(var i=1; i<=5; i++)
+        // {
+        //     document.getElementById("2-"+i).style.visibility="hidden";
+        //     document.getElementById("3-"+i).style.visibility="hidden";
+        //     document.getElementById("4-"+i).style.visibility="hidden";
+        //     document.getElementById("5-"+i).style.visibility="hidden";
+            // document.getElementById("6-"+i).style.visibility="hidden";
+        // }
+        //         for(var i=8; i<=9; i++)
+        // {
+        //     document.getElementById("7-"+i).style.visibility="hidden";
+        // }
 
-        document.getElementById("can51").style.visibility="hidden";
-        document.getElementById("v15").style.visibility="hidden";
 
-        document.getElementById("e3").style.visibility="visible";
-        document.getElementById("e4").style.visibility="visible";
-        document.getElementById("e5").style.visibility="visible";
-        document.getElementById("e6").style.visibility="visible";
-        document.getElementById("e10").style.visibility="visible";
+        document.getElementById("wm").style.visibility = "hidden";
+        document.getElementById("ada").style.visibility = "hidden";
+        document.getElementById("adb").style.visibility = "hidden";
+        document.getElementById("d191").style.visibility = "hidden";
+        document.getElementById("e2").style.visibility = "visible";
+        document.getElementById("ea").style.visibility = "hidden";
+        document.getElementById("eb").style.visibility = "hidden";
+        // document.getElementById("ca11").style.visibility = "hidden";
+        // document.getElementById("cb1").style.visibility = "hidden";
+
+        document.getElementById("can51").style.visibility = "hidden";
+        document.getElementById("v15").style.visibility = "hidden";
+
+        document.getElementById("e3").style.visibility = "visible";
+        document.getElementById("e4").style.visibility = "visible";
+        document.getElementById("e5").style.visibility = "visible";
+        document.getElementById("e6").style.visibility = "visible";
+        document.getElementById("e10").style.visibility = "visible";
 
 
         myInt = setInterval(function () {
@@ -1149,6 +1196,7 @@ function magic() {
                                                 document.getElementById('ea').onclick = " ";
                                                 document.getElementById('v7').innerHTML = "0.003";
                                                 document.getElementById("e1").style.backgroundColor = "lightgrey";
+                                                document.getElementById('v7').style.visibility = "visible";
                                                 setTimeout(function () {
                                                     myStopFunction();
                                                     myInt = setInterval(function () {
@@ -1163,7 +1211,7 @@ function magic() {
                                                         document.getElementById('eb').onclick = " ";
                                                         document.getElementById('v7').innerHTML = "00.00";
                                                         setTimeout(function () {
-                                                            document.getElementById('v7').style.visibility = "hidden";
+                                                            // document.getElementById('v7').style.visibility = "hidden";
                                                             setTimeout(function () {
                                                                 myStopFunction();
                                                                 myInt = setInterval(function () {
@@ -1177,7 +1225,8 @@ function magic() {
                                                                     myStopFunction();
                                                                     document.getElementById('e9').style.animation = "move351 0.5s  forwards";
                                                                     setTimeout(function () {
-                                                                        document.getElementById('can80').innerHTML = "weight of wet soil with lid (W<sub>2</sub>) in gms = <u>50.12gm</u>";
+                                                                        document.getElementById('v7').style.visibility = "hidden";
+                                                                        document.getElementById('can80').innerHTML = "Weight of wet soil with lid (W<sub>2</sub>), in gms = <u>50.12gm</u>";
                                                                         document.getElementById('v80').innerHTML = "50.12";
                                                                         document.getElementById("nextButton").style.visibility = "visible";
                                                                     }, 500);
@@ -1197,6 +1246,15 @@ function magic() {
             }, 1100);
         }
     } else if (simsubscreennum == 8) {
+        refresh();
+        // for(var i=1; i<=3; i++)
+        // {
+        // 	document.getElementById("8-"+i).style.visibility="hidden";
+        // }
+        // for(var i=5; i<=7; i++)
+        // {
+        // 	document.getElementById("2-"+i).style.visibility="hidden";
+        // }
 
         document.getElementById("v8").style.visibility = "hidden";
         document.getElementById("can8").style.visibility = "hidden";
@@ -1210,106 +1268,110 @@ function magic() {
         document.getElementById("nextButton").style.visibility = "hidden";
         document.getElementById("13-11").style.visibility = "visible";
         // document.getElementById("incDoor13-"+repeat).style="visibility:visible;";
-        document.getElementById("incDoor13-1").style="visibility:visible;";
-        document.getElementById("13-12").innerHTML="&nbsp;113";
+        document.getElementById("incDoor13-1").style = "visibility:visible;";
+        document.getElementById("13-12").innerHTML = "&nbsp;  113";
 
-        myInt = setInterval(function(){ animatearrow(); }, 500);
-        document.getElementById('arrow1').style="visibility:visible ;position:absolute; left:90px; top:235px; height: 30px; z-index: 10;";
+        myInt = setInterval(function () {
+            animatearrow();
+        }, 500);
+        document.getElementById('arrow1').style = "visibility:visible ;position:absolute; left:90px; top:235px; height: 30px; z-index: 10;";
         document.getElementById("arrow1").style.WebkitTransform = "rotate(270deg)";
         document.getElementById("arrow1").style.msTransform = "rotate(270deg)";
         document.getElementById("arrow1").style.transform = "rotate(270deg)";
-        document.getElementById("13-11").onclick=function()
-        {
+        document.getElementById("13-11").onclick = function () {
             myStopFunction();
             $('.door').toggleClass('doorOpen');
-            document.getElementById("13-11").onclick="";
-            setTimeout(function(){
-                document.getElementById("13-11").style.visibility="hidden";
-            },350);
-            setTimeout(function()
-            {
-                myInt = setInterval(function(){ animatearrow(); }, 500);
-                document.getElementById('arrow1').style="visibility:visible ;position:absolute; left:75px; top:485px; height: 30px; z-index: 10;";
+            document.getElementById("13-11").onclick = "";
+            setTimeout(function () {
+                document.getElementById("13-11").style.visibility = "hidden";
+            }, 350);
+            setTimeout(function () {
+                myInt = setInterval(function () {
+                    animatearrow();
+                }, 500);
+                document.getElementById('arrow1').style = "visibility:visible ;position:absolute; left:75px; top:485px; height: 30px; z-index: 10;";
                 document.getElementById("arrow1").style.WebkitTransform = "rotate(180deg)";
                 document.getElementById("arrow1").style.msTransform = "rotate(180deg)";
                 document.getElementById("arrow1").style.transform = "rotate(180deg)";
-                document.getElementById("13-3a").onclick=function()
-                {
+                document.getElementById("13-3a").onclick = function () {
                     myStopFunction();
-                    document.getElementById("13-3a").onclick="";
-                    document.getElementById("13-3a").style.animation="placeContainerinOven 1.5s forwards";
+                    document.getElementById("13-3a").onclick = "";
+                    document.getElementById("13-3a").style.animation = "placeContainerinOven 1.5s forwards";
                     // document.getElementById("13-3b").style.animation="placeContainerwithSoilinOven 1.5s forwards";
-                    setTimeout(function()
-                    {
-                        myInt = setInterval(function(){ animatearrow(); }, 500);
-                        document.getElementById('arrow1').style="visibility:visible ;position:absolute; left:430px; top:255px; height: 35px; z-index: 10;";
+                    setTimeout(function () {
+                        myInt = setInterval(function () {
+                            animatearrow();
+                        }, 500);
+                        document.getElementById('arrow1').style = "visibility:visible ;position:absolute; left:430px; top:255px; height: 35px; z-index: 10;";
                         document.getElementById("arrow1").style.WebkitTransform = "rotate(0deg)";
                         document.getElementById("arrow1").style.msTransform = "rotate(0deg)";
                         document.getElementById("arrow1").style.transform = "rotate(0deg)";
-                        // document.getElementById("incDoor13-"+repeat).onclick=function()
-                        document.getElementById("incDoor13-1").onclick=function()
-                        {
+                        // document.getElementById("incDoor13-"+repeat).onclick=function(){
+                        document.getElementById("incDoor13-1").onclick = function () {
                             myStopFunction();
                             // document.getElementById("incDoor13-"+repeat).onclick="";
-                            document.getElementById("incDoor13-1").onclick="";
+                            document.getElementById("incDoor13-1").onclick = "";
                             $('.door').toggleClass('doorOpen');
-                            setTimeout(function()
-                            {
-                                document.getElementById("13-11").style.visibility="visible";
+                            setTimeout(function () {
+                                document.getElementById("13-11").style.visibility = "visible";
 
-                                var temp=113;
-                                myInt = setInterval(function(){ animatearrow(); }, 500);
-                                document.getElementById('arrow1').style="visibility:visible ;position:absolute; left:215px; top:147px; height: 25px; z-index: 10;";
+                                var temp = 113;
+                                myInt = setInterval(function () {
+                                    animatearrow();
+                                }, 500);
+                                document.getElementById('arrow1').style = "visibility:visible ;position:absolute; left:215px; top:147px; height: 25px; z-index: 10;";
                                 document.getElementById("arrow1").style.WebkitTransform = "rotate(270deg)";
                                 document.getElementById("arrow1").style.msTransform = "rotate(270deg)";
                                 document.getElementById("arrow1").style.transform = "rotate(270deg)";
-                                document.getElementById("13-13").onclick=function()
-                                {
-                                    if(temp<115)
-                                    {
+                                document.getElementById("13-13").onclick = function () {
+                                    if (temp < 115) {
                                         temp++;
-                                        document.getElementById("13-12").innerHTML="&nbsp;"+temp;
+                                        document.getElementById("13-12").innerHTML = "&nbsp;" +  temp;
                                     }
-                                    if(temp>=115)
-                                    {
+                                    if (temp >= 115) {
                                         myStopFunction();
-                                        document.getElementById("13-13").onclick="";
-                                        setTimeout(function()
-                                        {
-                                            document.getElementById("13-2").style.visibility="visible";
+                                        document.getElementById("13-13").onclick = "";
+                                        setTimeout(function () {
+                                            document.getElementById("13-2").style.visibility = "visible";
                                             $("#13-3").fadeIn(1000);
-                                            setTimeout(function()
-                                            {
+                                            setTimeout(function () {
                                                 $("#13-3").fadeOut(2000);
-                                                setTimeout(function()
-                                                {
-                                                    document.getElementById("13-2").style.visibility="hidden";
+                                                setTimeout(function () {
+                                                    document.getElementById("13-2").style.visibility = "hidden";
                                                     takeOutCaontainer();
-                                                },2000);
-                                            },2000);
-                                        },1500);
+                                                }, 2000);
+                                            }, 2000);
+                                        }, 1500);
                                     }
                                 }
-                            },1150);
+                            }, 1150);
                         }
-                    },1500);
+                    }, 1500);
                 }
-            },1500);
+            }, 1500);
         }
-    }
+    } else if (simsubscreennum == 9) {
 
-    else if (simsubscreennum == 9) {
+        refresh();
+        // for(var i=6; i<=11; i++)
+        // {
+        //     document.getElementById("4-"+i).style.visibility="hidden";
+        // }
 
-        document.getElementById("2").style.visibility="visible";
-        document.getElementById("fa").style.visibility="visible";
-        document.getElementById("fb").style.visibility="visible";
+        document.getElementById("2").style.visibility = "visible";
+        document.getElementById("fa").style.visibility = "visible";
+        document.getElementById("fb").style.visibility = "visible";
         // document.getElementById("13-a").style.visibility="visible";
 
-        document.getElementById("13-1").style.visibility="hidden";
-        document.getElementById("13-11").style.visibility="hidden";
-        document.getElementById("13-2").style.visibility="hidden";
-        document.getElementById("13-3").style.visibility="hidden";
-        document.getElementById("13-a").style.visibility="visible";
+        // document.getElementById("13-13").style.visibility = "hidden";
+        // document.getElementById("13-14").style.visibility = "hidden";
+
+        document.getElementById("13-1").style.visibility = "hidden";
+
+        document.getElementById("13-11").style.visibility = "hidden";
+        document.getElementById("13-2").style.visibility = "hidden";
+        document.getElementById("13-3").style.visibility = "hidden";
+        document.getElementById("13-a").style.visibility = "visible";
 
 
         setTimeout(function () {
@@ -1341,7 +1403,7 @@ function magic() {
                         setTimeout(function () {
                             document.getElementById('w').style.visibility = "hidden";
                             setTimeout(function () {
-                                document.getElementById("13-a").style.visibility="visible";
+                                document.getElementById("13-a").style.visibility = "visible";
                                 myStopFunction();
                                 myInt = setInterval(function () {
                                     animatearrow();
@@ -1355,12 +1417,12 @@ function magic() {
                                     document.getElementById('13-a').style.animation = "move351 0.5s  forwards";
                                     setTimeout(function () {
                                         document.getElementById('w11').style.visibility = "hidden";
-                                        document.getElementById('can').innerHTML = "weight of dry soil with lid (W<sub>3</sub>) in gms = <u>47.45</u>gm";
+                                        document.getElementById('can').innerHTML = "Weight of dry soil with lid (W<sub>3</sub>), in gms = <u>47.45</u>gm";
                                         document.getElementById('v').innerHTML = "47.45";
 
-                                        document.getElementById('canc').innerHTML = "moisture content W = ((W<sub>2</sub>-W<sub>3</sub>)/(W<sub>3</sub>-W<sub>1</sub>)) = <u>0.139425587467363</u>gm";
+                                        document.getElementById('canc').innerHTML = "Moisture content W = ((W<sub>2</sub>-W<sub>3</sub>)/(W<sub>3</sub>-W<sub>1</sub>)) = <u>0.1394</u>gm";
                                         document.getElementById("nextButton").style.visibility = "visible";
-                                    }, 500);
+                                    }, 1000);
                                 }
                             }, 500);
                         }, 1100);
@@ -1368,42 +1430,53 @@ function magic() {
                 }, 1100);
             }
         }, 500);
-    } else (simsubscreennum == 10)
+    }
+
+
+    else if(simsubscreennum == 10)
     {
+        refresh();
+        document.getElementById("sheet11").style.visibility = "hidden";
+        document.getElementById("e1").style.visibility = "hidden";
+        document.getElementById("ea").style.visibility = "hidden";
+        document.getElementById("eb").style.visibility = "hidden";
+        document.getElementById("13-a").style.visibility = "hidden";
+        document.getElementById("2").style.visibility = "hidden";
+        document.getElementById("fa").style.visibility = "hidden";
+        document.getElementById("fb").style.visibility = "hidden";
 
-        document.getElementById("e1").style.visibility="hidden";
-        document.getElementById("ea").style.visibility="hidden";
-        document.getElementById("eb").style.visibility="hidden";
-        document.getElementById("13-a").style.visibility="hidden";
 
+        document.getElementById("wd").value="";
+        document.getElementById("wd").disabled=false;
+        document.getElementById("wc").value="";
+        document.getElementById("wc").disabled=false;
+        document.getElementById("dd").value="";
+        document.getElementById("dd").disabled=false;
 
+        for( var i=1;i<=3;i++)
+        {
+            document.getElementById("mark"+i).style.visibility="visible";
+            document.getElementById("mark"+i).innerHTML="";
+            document.getElementById("res"+i).style.visibility="visible";
+            document.getElementById("res"+i).disabled=true;
+            document.getElementById("chk"+i).style.visibility="visible";
+        }
+        document.getElementById("sheet1").style.visibility="visible";
+        document.getElementById("sheet2").style.visibility="visible";
 
-        document.getElementById("mark1").style.visibility="visible";
-        document.getElementById("mark1").innerHTML="";
-        // document.getElementById("res1").style.visibility="visible";
-        document.getElementById("res1").disabled=true;
-        // document.getElementById("chk1").style.visibility="visible";
+        // document.getElementById("t1").innerHTML=dataset[p][5];
+        document.getElementById("t2").innerHTML=dataset[p][0];
+        document.getElementById("t3").innerHTML=dataset[p][1];
+        document.getElementById("t4").innerHTML=dataset[p][2];
+        document.getElementById("t5").innerHTML=dataset[p][3];
+        document.getElementById("t6").innerHTML=dataset[p][4];
 
-        // document.getElementById("sheet1").style.visibility="visible";
-        // document.getElementById("sheet2").style.visibility="visible";
-
-        document.getElementById("a01").innerHTML=array[p][0];
-        document.getElementById("a02").innerHTML=array[p][1];
-        document.getElementById("a03").innerHTML=array[p][2];
-        document.getElementById("a04").innerHTML=array[p][3];
-        document.getElementById("a05").innerHTML=array[p][4];
-
-        var wd = (array[p][1] - array[p][0])/array[p][3];
-        var wc = ((array[p][2] - array[p][3])/(array[p][3] - array[p][1]))*100;
+        var wd = (dataset[p][1] - mldWght)/mldVol;
+        var wc = ((dataset[p][3] - dataset[p][4])/(dataset[p][4] - dataset[p][2]))*100;
         var dd = wd/(1+wc);
         cnt=0;
         document.getElementById("chk1").onclick=function()
         {
-            document.getElementById("2").style.visibility="hidden";
-            document.getElementById("fa").style.visibility="hidden";
-            document.getElementById("fb").style.visibility="hidden";
-            // document.getElementById("hide").style.visibility="visible";
-
             var id1=document.getElementById("wd");
             var mark1=document.getElementById("mark1");
             var chk1=document.getElementById("chk1");
@@ -1413,8 +1486,6 @@ function magic() {
         }
         document.getElementById("chk2").onclick=function()
         {
-            // document.getElementById("show").style.visibility="visible";
-
             var id2=document.getElementById("wc");
             var mark2=document.getElementById("mark2");
             var chk2=document.getElementById("chk2");
@@ -1424,18 +1495,32 @@ function magic() {
         }
         document.getElementById("chk3").onclick=function()
         {
-            // document.getElementById("sh").style.visibility="visible";
-
             var id3=document.getElementById("dd");
             var mark3=document.getElementById("mark3");
             var chk3=document.getElementById("chk3");
             var res3=document.getElementById("res3");
             var sheet3=document.getElementById("sheet2");
-            validateAnswer(id3, dd, mark3, chk3, res3, sheet3);
+            validateAnswer(id3, dd, mark3, chk3, res3, sheet2);
         }
     }
-}
 
+
+
+
+
+
+
+
+
+
+
+    else  (simsubscreennum == 11)
+    {
+        generate_table();
+        document.getElementById("trial").innerHTML="";
+    }
+
+}
 
 function validateAnswer(id,ans,mark,chk,res,sheet)
 {
@@ -1446,8 +1531,8 @@ function validateAnswer(id,ans,mark,chk,res,sheet)
     }
     else
     {
-        num = id.value;
-        if(Math.round(num*100) == Math.round(ans*100))
+        n = id.value;
+        if(Math.round(n) == Math.round(ans))
         {
             mark.style="visibility:visible; color:green; font-size:22px;";
             var right="&#10004;";
@@ -1460,7 +1545,6 @@ function validateAnswer(id,ans,mark,chk,res,sheet)
             setTimeout(function()
             {
                 sheet.style.visibility="hidden";
-
             },250);
             check();
         }
@@ -1480,7 +1564,7 @@ function validateAnswer(id,ans,mark,chk,res,sheet)
         },250);
         chk.style.visibility="hidden";
         res.style.visibility="hidden";
-        id.value=ans.toFixed(4);;
+        id.value=ans.toFixed(4);
         id.style.color="black";
         id.disabled=true;
         id.style.backgroundColor="white";
@@ -1488,6 +1572,10 @@ function validateAnswer(id,ans,mark,chk,res,sheet)
         check();
     }
 }
+
+
+
+
 
 function takeOutCaontainer()
 {
@@ -1534,6 +1622,7 @@ function takeOutCaontainer()
                             setTimeout(function()
                             {
                                 document.getElementById("13-11").style.visibility="visible";
+                                document.getElementById("13-2").style.visibility="hidden";
                                 document.getElementById("nextButton").style.visibility="visible";
                             },1150);
                         }
@@ -1566,4 +1655,16 @@ function check()
             simsubscreennum==10;
         }
     }
+}
+
+
+
+function refresh() {
+    document.getElementById("d191").style.animation = "";
+    document.getElementById("e2").style.animation = "";
+    document.getElementById("e7").style.animation = "";
+    document.getElementById("e71").style.animation = "";
+    document.getElementById("e9").style.animation = "";
+    document.getElementById("13-3a").style.animation = "";
+    document.getElementById("13-a").style.animation = "";
 }
