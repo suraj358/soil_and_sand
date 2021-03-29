@@ -575,13 +575,13 @@ td, th {
 }
 
 @keyframes move30 {
-    from {left: 50px; top: 250px;}
-    to {left: 430px; top: 200px}
+    from {left: 50px; top: 270px;}
+    to {left: 420px; top: 230px}
 }
 
 @-webkit-keyframes move30 {
-    from {left: 50px; top: 250px;}
-    to {left: 430px; top: 200px}
+    from {left: 50px; top: 270px;}
+    to {left: 420px; top: 230px}
 }
 
 /* step5 */
